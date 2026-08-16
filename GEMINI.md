@@ -16,16 +16,18 @@ A novel hypothesis is valuable only if it survives aggressive novelty checking, 
 
 # 0. Research operating system
 
-Treat the project as a continuously updated scientific investigation, not a sequence of independent prompts.
+Treat the project as a continuously updated scientific investigation, not a sequence of independent prompts. Follow `research/SEARCH_POLICY.md` for token-efficient search escalation.
 
-Maintain four persistent states:
+Maintain persistent state files under `state/`:
 
-1. **World model** — what the literature currently supports.
-2. **Hypothesis pool** — competing explanations with explicit predictions.
-3. **Uncertainty map** — contradictions, missing evidence, and unresolved questions.
-4. **Research queue** — the next investigations ranked by expected information gain.
+1. **`state/world-model.md`** — what verified literature currently supports.
+2. **`state/hypothesis-pool.md`** — competing explanations (N0–N4) with explicit predictions.
+3. **`state/uncertainty-map.md`** — contradictions, missing evidence, and unresolved questions.
+4. **`state/research-queue.md`** — the next investigations ranked by expected information gain.
+5. **`state/dead-ends.md`** — rejected hypotheses and decisive falsification evidence.
+6. **`state/search-cache.md`** — query cache to prevent redundant literature searches.
 
-Every research cycle must update all four.
+Every research cycle must inspect and update these persistent states.
 
 Never optimize for number of papers read. Optimize for **useful uncertainty reduction and discovery of high-value causal connections**.
 
@@ -55,6 +57,11 @@ The correct behavior is:
 # 2. Evidence discipline
 
 Never equate correlation with mechanism.
+
+Always test for **Reverse Causality**:
+- Does the ingestion behavior cause the physiological abnormality (e.g., geophagy binding dietary cations and inducing iron/zinc deficiency)?
+- Or does the deficiency precede and trigger the craving?
+- Verify temporal sequencing in longitudinal studies before assuming deficiency is the upstream driver.
 
 Classify important claims as:
 
@@ -88,8 +95,8 @@ Do not initially treat Pica as one homogeneous biological phenotype.
 
 Investigate separately:
 
-- Pagophagia / ice craving
-- Geophagia / soil or clay ingestion
+- Pagophagia / ice craving (test sensory-neuromodulatory & cerebral perfusion vs. metabolic hypotheses)
+- Geophagia / soil or clay ingestion (test intestinal barrier, binding/chelation, toxin protection & micronutrient hypotheses)
 - Amylophagia / starch consumption
 - Chalk/mineral ingestion
 - Paper ingestion
@@ -101,7 +108,7 @@ For every substance ask:
 
 > **Why this substance?**
 
-Investigate whether physical or chemical properties of the consumed substance provide mechanistic clues.
+Investigate whether physical or chemical properties of the consumed substance provide mechanistic clues (e.g., cation-exchange capacity, oral tactile/temperature stimulation, mucosal coating, gastric acid buffering).
 
 Ask whether several behaviors are being grouped under one diagnosis despite having different biological causes.
 
@@ -580,6 +587,9 @@ Investigate:
 - Nutrient-specific appetite
 - Deficiency-induced ingestion
 - Self-medication behavior
+
+**Animal Model Guardrail:**
+In non-emetic species (such as rats and mice), kaolin ingestion is an established behavioral surrogate for **visceral malaise / nausea**, not appetitive nutrient hunger. Explicitly evaluate whether animal observations reflect nausea-induced anti-nausea ingestion or true deficiency-driven appetite before extrapolating to humans.
 
 Ask whether the human phenotype resembles an evolutionarily conserved physiological behavior, then test the mechanistic analogy rather than assuming it.
 

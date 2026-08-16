@@ -1,14 +1,14 @@
 {
-  "hooks": {
+  "research-gate": {
     "PreInvocation": [
       {
-        "command": "python3 .agents/hooks/research_gate.py",
+        "command": "python3 .agents/hooks/research_gate.py --event PreInvocation",
         "timeout": 10
       }
     ],
     "Stop": [
       {
-        "command": "python3 .agents/hooks/research_gate.py",
+        "command": "python3 .agents/hooks/research_gate.py --event Stop",
         "timeout": 10
       }
     ]
