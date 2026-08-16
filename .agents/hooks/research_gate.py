@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-"""Small, dependency-free research gate for Antigravity hooks.
+"""Dependency-free Antigravity research gate.
 
-The hook intentionally does not perform research. It enforces that the
-research agent maintains a persistent state and cannot silently finish a
-cycle without recording the next uncertainty to investigate.
+The hook enforces research discipline without doing research itself. It gives
+Gemini a compact reminder to use persistent state and the search cache, and it
+prevents a cycle from ending without a usable next investigation.
 """
 from __future__ import annotations
 
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -20,41 +19,37 @@ REQUIRED = [
     STATE / "hypothesis-pool.md",
     STATE / "research-queue.md",
     STATE / "dead-ends.md",
+    STATE / "search-cache.md",
 ]
 
 
 def main() -> None:
     event = json.load(sys.stdin)
     hook = event.get("hook_event_name", "unknown")
-    prompt = event.get("prompt", "")
 
     missing = [str(p.relative_to(ROOT)) for p in REQUIRED if not p.exists()]
-    warnings = []
-    if missing:
-        warnings.append("Initialize missing research state: " + ", ".join(missing))
 
-    # Pre-invocation: inject a compact operational reminder.
     if hook == "PreInvocation":
         context = (
-            "RESEARCH GATE: Before this cycle, read state/world-model.md, "
-            "state/uncertainty-map.md, state/hypothesis-pool.md and "
-            "state/research-queue.md. Identify ONE uncertainty this cycle is "
-            "intended to reduce. Prefer a discriminating investigation over "
-            "confirmatory searching. Persist meaningful updates."
+            "RESEARCH GATE: Before this cycle, inspect the persistent state and "
+            "search cache. Identify ONE uncertainty this cycle is intended to "
+            "reduce. Check search-cache.md before launching literature searches. "
+            "Reuse sufficient existing evidence; if the cache partially answers "
+            "the question, search only the missing dimension. Prefer a small, "
+            "discriminating investigation over broad confirmatory searching. "
+            "Update state only when evidence changes the model, ranking, or queue."
         )
-        if warnings:
-            context += " " + " ".join(warnings)
+        if missing:
+            context += " Missing state files: " + ", ".join(missing)
         print(json.dumps({"decision": "allow", "additional_context": context}))
         return
 
-    # Stop: only block when there is no persistent state at all. Do not create
-    # an infinite autonomous loop; the scientific prompt owns continuation.
     if hook == "Stop":
         queue = STATE / "research-queue.md"
         if not queue.exists() or queue.stat().st_size < 80:
             print(json.dumps({
                 "decision": "block",
-                "reason": "Research state has no usable next-investigation queue. Record the highest-information next question before stopping."
+                "reason": "No usable next-investigation queue. Record the highest-information next question before stopping."
             }))
         else:
             print(json.dumps({"decision": "allow"}))
