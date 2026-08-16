@@ -1,7 +1,11 @@
 # Uncertainty Map
 
-Track unresolved observations, contradictions, missing causal edges, and terminology gaps.
+Track unresolved empirical observations, contradictions, missing causal edges, and mechanistic anomalies.
 
-| ID | Observation / contradiction | Current explanation | Missing evidence | Candidate questions | Priority |
+| ID | Observation / Contradiction | Current Model Failure | Missing Causal Edge | Candidate Questions | Priority |
 |---|---|---|---|---|---|
-| U-001 | Not initialized | — | — | — | — |
+| **U-001** | **Ultra-rapid IV Iron Response in Pagophagia:** Craving vanishes in 24–48h, weeks before red cell indices or brain ferritin normalize. | Classical hematological model cannot explain rapid non-erythroid sensor. | Sensor transmitting blood iron status to CNS appetite circuits in <24h. | Q-001: Does plasma labile iron pool or endothelial transferrin sensing rapidly signal the hypothalamus or locus coeruleus? | High |
+| **U-002** | **NPVF Genetic Linkage to Pica:** GWAS implicates Neuropeptide VF (`rs73277282`), but NPVF has not been mapped to iron biology. | Pica previously viewed solely as nutritional craving or dopaminergic dysfunction without specific peptide regulator. | Molecular bridge between cellular iron status (IRP/IRE) and hypothalamic NPVF/RFRP expression. | Q-002: How does iron starvation modulate NPVF transcription in hypothalamic neurons? | High |
+| **U-003** | **Desiderosmia & Olfactory Trigger for Geophagia:** Iron-deficient patients report intense cravings for smells (petrichor, damp brick, earth) preceding eating non-food items. | Purely oral/ingestive nutritional models ignore primary chemosensory (olfactory bulb) modulation. | Link between high olfactory bulb iron requirements, dopamine in olfactory tubercle, and consummatory drive. | Q-003: Does olfactory bulb iron depletion hyper-sensitize geosmin/petrichor receptors? | High |
+| **U-004** | **Geophagy vs. Amylophagy Divergence in RCTs:** Ferric carboxymaltose significantly reduces geophagy but not amylophagy in Malawian pregnant women (REVAMP 2025). | Monolithic iron deficiency model predicts all pica subtypes should resolve equally. | Separate physiological / gastrointestinal triggers between clay vs. raw starch craving. | Q-004: Is amylophagy driven by glucose/metabolic sensing or pregnancy hormones rather than iron? | Medium |
+| **U-005** | **Animal Kaolin Ingestion vs. Human Geophagy:** Rodents eat clay during lithium/cisplatin nausea (visceral malaise), but human geophagy often occurs without acute toxicity. | Extrapolating rodent nausea models to human nutritional/pregnancy geophagy leads to false mechanistic analogies. | Differentiating area postrema / emetic nausea circuitry from hypothalamic micronutrient drive. | Q-005: Can rodent kaolin models be decoupled into nausea-driven vs. iron-deficiency-driven paradigms? | Medium |
