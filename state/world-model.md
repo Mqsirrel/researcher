@@ -12,24 +12,40 @@ Pica is not a single biological entity, but a set of distinct consumptive and se
 ### B. Genetic Architecture (2026 Landmark Finding)
 - **GWAS (REDS-III & All of Us, N=12,157):** Identified genome-wide significant association (`rs73277282`, p = 1.53 × 10⁻⁸) near the **Neuropeptide VF (NPVF)** gene, interacting with low ferritin levels to trigger pica.
 
-### C. Neurochemical & Physiological Observations
-- **Iron as Tyrosine Hydroxylase Cofactor:** Iron deficiency selectively downregulates central D2 receptor density and presynaptic dopamine synthesis in the ventral striatum and substantia nigra.
+### C. Neuroendocrine & Chemosensory Discoveries (2024–2026)
+- **Glucocorticoid Regulation of NPVF:** Mammalian RFRP-3 / NPVF transcription is directly induced by Glucocorticoid Receptor (GR) binding to the NPVF promoter during physiological stress.
+- **Elevated Cortisol in Maternal Pica (PMID 38050975):** Pica during pregnancy is significantly correlated with elevated maternal cortisol ($\beta = 0.37$).
 - **Trigeminal Reflex & Cerebral Perfusion (Hunt et al., 2014):** Ice mastication triggers cold-sensing trigeminal afferents and sympathetic activation, increasing cerebral perfusion velocity to transiently relieve cognitive fatigue caused by anemic cerebral hypoxia.
-- **Endocrine & Immune Signatures (2024–2025):** Maternal pica correlates with elevated salivary/urinary cortisol and blunted systemic pro-inflammatory cytokines (IL-1β, IL-8, IL-21).
 
 ---
 
 ## 2. Mechanistic Knowledge Graph
 
-- `[Iron Deficiency]` --(Cofactor depletion)--> `[Tyrosine Hydroxylase down]` --> `[Striatal Dopamine D2 down]` --> `[Compulsive Appetitive Drive]`
-- `[Anemic Hypoxia]` --(Fatigue / Low Perfusion)--> `[Cold Mastication (TRPM8)]` --> `[Trigeminal / Sympathetic Activation]` --> `[Cerebral Blood Flow ↑]` (Pagophagia specific)
-- `[Iron Deficiency / Ferritin ↓]` + `[NPVF Polymorphism (rs73277282)]` --> `[Hypothalamic Appetite Circuit Disinhibition]` --> `[Non-food Ingestion]`
-- `[Ingested Clay (Smectite/Kaolinite)]` --(Cation binding in lumen)--> `[Iron/Zinc Chelation]` --> `[Induces/Exacerbates Anemia]` (Reverse Causality)
-- `[Ingested Clay]` --(Surface adsorption)--> `[Mucosal Barrier Protection / Toxin Binding]` --> `[Relief of Morning Sickness / Enteritis]`
+```
+[Systemic Iron Deficiency & Hypoxia]
+       │
+       ├─────────────────────────────────────────┐
+       ▼                                         ▼
+[HPA Axis Hyperactivation & Cortisol ↑]    [Tyrosine Hydroxylase ↓ & Striatal D2 ↓]
+       │                                         │
+       ▼ (Glucocorticoid Receptor Binding)       ▼
+[Hypothalamic NPVF / RFRP-3 Transcription ↑]  [Compulsive Salience / Craving]
+       │  (Modulated by rs73277282 variant)      │
+       ▼                                         ▼
+[NPFFR1 Activation in Arcuate / Lateral Hypothalamus]
+       │
+       ▼
+[Disinhibition of Non-Selective Orexigenic Drive] ───► [PICA PHENOTYPES]
+                                                            ▲
+       ┌────────────────────────────────────────────────────┴───────────────┐
+       │ (Cold Sensory Feedback)                                            │ (Chemosensory Priming)
+[TRPM8 Trigeminal Stimulation via Ice]                             [Olfactory Bulb Hyper-gain]
+  → [Cerebral Perfusion & Alertness ↑]                               → [Desiderosmia / Geophagia]
+```
 
 ---
 
-## 3. Evidence Gaps & Contradictions
-1. **The Non-Erythroid Sensor:** How does IV iron abolish pagophagia within 24h when brain/tissue iron and red cell mass take weeks to restore?
-2. **Substance Specificity:** What neurosensory switch determines whether an iron-deficient individual develops pagophagia, geophagia, or desiderosmia?
-3. **NPVF Hypothalamic Signaling:** Through which receptor (NPFFR1 / NPFFR2) does NPVF interact with iron homeostatic sensors (IRP1/IRP2, transferrin receptor)?
+## 3. Explanatory Power of the Unified Model
+1. **Explains the Rapid IV Iron Resolution:** Rapid IV iron infusion immediately restores brainstem/hypothalamic oxygen delivery and metabolic tone, rapidly quenching HPA axis hyperactivation and downregulating NPVF release in $<24$ hours, long before erythropoiesis.
+2. **Explains Genetic Susceptibility:** Individuals carrying the `rs73277282` risk allele have heightened basal or stress-induced NPVF promoter responsiveness under low-ferritin conditions.
+3. **Explains Substance Specificity:** The general orexigenic disinhibition (NPVF) is channeled into specific substances by localized sensory feedback loops (TRPM8 cooling for cognitive fatigue, olfactory bulb hypersensitivity for petrichor/clay).

@@ -2,9 +2,9 @@
 
 Rank candidate investigations by expected information gain, importance, feasibility, and ability to discriminate competing hypotheses.
 
-## Highest-Information Next Investigation (Cycle 2 Target)
-**Q-001: Molecular & Circuit Characterization of the NPVF / RFRP Orexigenic Gate in Cellular Iron Starvation**
-- **Objective:** Determine whether Neuropeptide VF (NPVF) and its G-protein coupled receptors (NPFFR1 / NPFFR2) are transcriptionally modulated by intracellular iron regulatory proteins (IRP1/IRP2, TfR1) in hypothalamic appetite centers, and whether this peptide pathway selectively lowers the threshold for non-food / textured consummatory behavior.
+## Highest-Information Next Investigation (Cycle 3 Target)
+**Q-001: Experimental Protocol & Cohort Re-Analysis for the Cortisol–NPVF–Pica Axis**
+- **Objective:** Detail a discriminating clinical and animal experimental study design testing whether NPFFR1 antagonism (RF9) blocks pica in iron-deficient models, and specify the biobank analysis (All of Us / UK Biobank) to test interaction between serum cortisol, ferritin, `rs73277282`, and pica incidence.
 
 ---
 
@@ -12,13 +12,7 @@ Rank candidate investigations by expected information gain, importance, feasibil
 
 | ID | Question | Hypotheses Distinguished | Expected Info Gain | Feasibility | Priority |
 |---|---|---|---:|---:|:---:|
-| **Q-001** | How does cellular iron starvation regulate NPVF/RFRP expression in the hypothalamus, and does NPFFR1 antagonism block non-food ingestion? | H-005 vs H-001 & H-002 | 5/5 | 4/5 | **Highest (Active)** |
-| **Q-002** | What rapid non-erythroid sensor mediates the 24–48h cessation of pagophagia following IV ferric carboxymaltose? | H-003 vs H-005 vs H-001 | 4/5 | 4/5 | **High** |
-| **Q-003** | Does iron deficiency alter olfactory bulb glomeruli or dopaminergic tone in the olfactory tubercle to produce desiderosmia for geosmin/petrichor? | H-006 vs H-002 | 4/5 | 4/5 | **High** |
-| **Q-004** | What non-iron physiological driver (e.g., amylase genetics / AMY1 copy number, glucose metabolism, or gestational hormones) explains amylophagy persistence? | H-001 vs GI metabolic model | 3/5 | 4/5 | **Medium** |
-| **Q-005** | Can transcranial Doppler (TCD) or functional NIRS verify that oral cold stimulation increases middle cerebral artery blood flow velocity selectively in iron-deficient patients? | H-003 vs H-002 | 4/5 | 3/5 | **Medium** |
-
----
-
-## Rule
-Prefer investigations whose possible outcomes would change the hypothesis ranking or eliminate competing models over broad confirmatory searches.
+| **Q-001** | What existing clinical biobank dataset (All of Us / REDS-III) contains paired cortisol, ferritin, and pica phenotypes to test the H-005 interaction model? | H-005 vs H-001 | 5/5 | 5/5 | **Highest (Active)** |
+| **Q-002** | What is the minimum viable rodent study design to evaluate NPFFR1 blockade (RF9) on ice/clay seeking in iron deficiency? | H-005 vs H-002 | 5/5 | 4/5 | **High** |
+| **Q-003** | Does salivary alpha-amylase activity or *AMY1* gene copy number distinguish amylophagy sufferers from geophagy/pagophagia sufferers? | Amylophagy model vs H-001 | 4/5 | 4/5 | **Medium** |
+| **Q-004** | What is the exact time-course of HPA axis attenuation following intravenous ferric carboxymaltose infusion in humans? | H-005 vs H-003 | 4/5 | 4/5 | **Medium** |
