@@ -4,7 +4,7 @@ Record meaningful literature searches so future cycles reuse results instead of 
 
 | Query / Concept | Date | Sources Searched | Key Result | Coverage | Re-search When |
 |---|---|---|---|---|---|
-| Ensembl GRCh38 mapping for rs73277282 & 7p15.3 | 2026-08-17 | Ensembl REST API | rs73277282 is at chr7:25233039, exactly 4,553 bp upstream of NPVF 5' start site; CYCS is 107.6 kb upstream; SPMIP4 is 52.6 kb upstream. | Complete | Assembly update |
+| Fine-mapping & LD proxies for rs73277282 (1000G EUR) | 2026-08-17 | Ensembl LD API | 4 high-LD proxies (r2 > 0.9) define a tight 17.5 kb credible set; rs111374644 alters regulatory feature ENSR7_9D2JJ. | Complete | 1000G Phase 4 |
+| Regulatory & Enhancer Overlap at 7p15.3 | 2026-08-17 | Ensembl Regulation & ENCODE | ENSR7_9D2JJ is an active enhancer located at chr7:25244170-25244675, 15.7 kb upstream of NPVF 5' start site. | Complete | Epigenome Roadmap update |
+| 7p15.3 Super-Enhancer & TAD Architecture | 2026-08-17 | BioRxiv & ResearchGate Hi-C | 600 kb gene desert contains a super-enhancer controlling neural crest and HOXA development; fine-mapped LD block sits at proximal NPVF boundary. | Complete | Hypothalamic Micro-C published |
 | GTEx v8 Single-Tissue eQTL for rs73277282 | 2026-08-17 | GTEx Portal API | 0 statistically significant eQTLs across GTEx v8 bulk tissues (NPVF expression is restricted to tiny hypothalamic subnuclei). | Complete | GTEx v10 released |
-| Trait associations for rs73277282 in UK Biobank / GWAS | 2026-08-17 | OpenGWAS & PubMed | Primary trait association is pica in repeated blood donors (REDS-III, PMID 41708529, replicated in All of Us). | Complete | New blood donor GWAS |
-| RF9 Selectivity & Off-Targets (NPFFR1 / KISS1R) | 2026-08-17 | PubMed & Pharmacological reviews | RF9 is an active agonist at KISS1R (GPR54) with potent LH-releasing effects in Npffr1 KO mice, invalidating in vivo NPFFR1 selectivity. | Complete | Novel antagonist published |

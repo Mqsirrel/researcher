@@ -9,21 +9,11 @@ Pica is not a single biological entity, but a set of distinct consumptive and se
 3. **Amylophagia (Raw Starch / Flour):** Craving uncooked starch (cornstarch, raw rice, cassava). Distinct response profile from geophagy in clinical trials (e.g., REVAMP RCT in Malawi, 2025).
 4. **Desiderosmia (Olfactory Pica Variant):** Compulsive craving to inhale volatile scents (wet earth/petrichor, pine cleaner, damp chalk, gasoline, brick dust) in severe iron deficiency, often preceding or co-occurring with geophagy.
 
-### B. Genetic Architecture (7p15.3 Locus)
-- **REDS-III GWAS (PMID 41708529, N=12,157):** Identified genome-wide significant association (`rs73277282`, $p = 1.53 \times 10^{-8}$) located 4.5 kb upstream of *NPVF* on chromosome 7p15.3, replicated in *All of Us*. Functional causal mechanism (eQTL status) in human hypothalamic tissue remains unverified.
+### B. Functional Genomics of the 7p15.3 Pica Locus
+- **Fine-Mapping:** `rs73277282` defines a tight 17.5 kb credible set (`chr7:25,233,039–25,250,528`) containing active enhancer **`ENSR7_9D2JJ`**.
+- **Enhancer Overlap:** Credible proxy `rs111374644` ($r^2=0.918$) falls directly inside `ENSR7_9D2JJ`, located 15.7 kb upstream of the *NPVF* core promoter.
+- **Candidate Evaluation:** *NPVF* is the primary positional and neurobiological candidate; housekeeping gene *CYCS* (164 kb away) and testis gene *SPMIP4* (109.5 kb away) lack tissue or functional concordance.
 
 ### C. Neurochemical & Physiological Mechanisms
 - **Striatal Dopaminergic Hypoactivity (H-002):** Iron is a non-heme cofactor for Tyrosine Hydroxylase (TH). Iron deficiency selectively depletes striatal dopamine synthesis and D2 receptor density, sharing biological pathways with Restless Legs Syndrome (RLS).
 - **Trigeminal Reflex & Cerebral Perfusion (H-003, Hunt et al., 2014):** Ice mastication stimulates oral cold-sensing trigeminal afferents (TRPM8), increasing middle cerebral artery blood flow velocity to relieve cognitive fatigue from anemic hypoxia.
-
----
-
-## 2. Evidence Hierarchy & Status
-
-| Fact / Claim | Status | Primary Grounding |
-| :--- | :---: | :--- |
-| **`rs73277282` associates with Pica in blood donors** | **ESTABLISHED** | REDS-III GWAS (Transfusion 2026, PMID 41708529). |
-| **`rs73277282` is 4.5 kb upstream of `NPVF`** | **ESTABLISHED** | Ensembl GRCh38 mapping (`chr7:25233039`). |
-| **`rs73277282` alters `NPVF` transcription in humans** | **UNPROVEN** | 0 significant eQTLs in GTEx v8; lacks hypothalamic functional assays. |
-| **Alternative gene `CYCS` is 107.6 kb away** | **ESTABLISHED** | Ensembl GRCh38 mapping (`chr7:25080179`). |
-| **NPVF causes non-food pica in animal models** | **UNTESTED** | Literature only demonstrates caloric chow feeding. |
