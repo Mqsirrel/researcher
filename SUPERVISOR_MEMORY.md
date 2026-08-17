@@ -55,66 +55,61 @@ Proposed chain: `IV iron → rapid TSAT increase → hepatic/periportal sensing 
 Critical weakness: zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes. Do not promote until missing transduction mechanism has stronger evidence or a defensible intermediate is identified.
 
 ### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagy
-Latest state before final pre-pilot audit: **GO — WITH SPECIFIC MODIFICATIONS (READY FOR PILOT)**.
+Latest state after final feasibility audit: **UNKNOWN — REQUIRES BIOBANK ACCESS**.
 
 Core proposition: `AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
 Core observation: cited REVAMP 2025 RCT reportedly found IV iron failed to resolve amylophagy while geophagy improved.
 
 The key unproven edge is **AMY1 copy number → compulsive non-food starch craving/amylophagia**. Established AMY1 digestion biology is not evidence for this edge.
 
-Latest proposed pilot from Gemini:
-- REVAMP 2025 cohort, reported N=862
+Verified/claimed REVAMP facts from latest Gemini audit:
+- cohort reported as N=862 anemic pregnant women in Malawi
+- randomized 1:1 IV ferric carboxymaltose vs standard oral iron
+- amylophagy measured by self-reported craving/consumption of raw starch, raw rice, or unripe mango over the prior 2 weeks at baseline and 4 weeks
+- banked maternal whole blood/buffy coat biorepository reportedly exists
+- Hb and serum ferritin measured baseline and 4 weeks
+- age, gestational age, parity, clinic site documented
+- granular GERD/heartburn and genome-wide ancestry data remain UNKNOWN/unconfirmed in public materials
+
+Important correction:
+Gemini previously inferred that >30 eligible cases could be obtained from aggregate 44.4% prevalence. This was rejected. Aggregate prevalence alone does NOT establish ≥30 eligible persistent-amylophagia cases after all filters and usable DNA.
+Gemini also previously proposed ancestry PCs 1–5 despite ancestry genotype data being unverified. This was rejected. Do not assume ddPCR AMY1/RPP30 can generate ancestry PCs.
+
+Current proposed pilot concept, still unvalidated:
 - 30 persistent amylophagia cases + 60 non-amylophagia controls
-- 1:2 matched case-control
-- proposed matching: clinic site + gestational age ±2 weeks + treatment arm
-- proposed eligibility: post-FCM ferritin >100 µg/L + Hb ≥110 g/L
+- controls from the same IV-FCM arm
+- matching mainly on recruitment clinic site and gestational age ±2 weeks
+- proposed post-FCM ferritin >100 µg/L and Hb ≥110 g/L gate, subject to further methodological justification
 - triplicate duplex ddPCR AMY1/RPP30
 - continuous AMY1 copy number as primary predictor
 - conditional logistic regression
-- pilot purpose: feasibility + AMY1 distribution/variance + assay validation + preliminary effect-size estimation
-
-Treat this as a **draft**, not validated. The next task is specifically to verify the real REVAMP feasibility and identify remaining design errors before execution planning.
+- pilot framed as feasibility, assay validation, AMY1 distribution/variance, and preliminary effect-size estimation—not causal proof or formal falsification
 
 ## Current ranking
-1. **H-008** — strongest current candidate; potentially novel and testable, but final REVAMP feasibility/design audit is pending.
+1. **H-008** — strongest current candidate; potentially novel and testable, but feasibility is currently UNKNOWN pending legitimate biobank feasibility/access.
 2. **H-007** — interesting/potentially novel, but missing critical sensor/transduction evidence.
 
 Do NOT generate H-009 yet.
 
 ## Current highest-value task
-Run a **final feasibility audit of H-008 only**. Do not perform another broad mechanism/novelty search.
+Determine the **legal and ethical access pathway** for H-008 feasibility information. Do NOT attempt to obtain restricted/private participant data or biospecimens directly.
 
-Verify from the actual REVAMP publication/protocol/supplement/data description, without assumptions:
-1. Total cohort and exact treatment arms.
-2. Which participants received IV FCM.
-3. How amylophagia was measured and whether persistent amylophagia can actually be reconstructed.
-4. Number of amylophagia cases and whether ≥30 can realistically satisfy all proposed criteria.
-5. Whether individual-level follow-up data exist.
-6. Whether ferritin/Hb are available at the required timepoints.
-7. Whether maternal genomic DNA/biobank samples exist.
-8. Whether clinic site, gestational age, treatment assignment, ancestry/genotype information, GERD/reflux, diet and other relevant covariates exist.
-9. Label every item VERIFIED / LIKELY / UNKNOWN / NOT AVAILABLE. Never infer availability merely because the trial was published.
+Gemini's next task:
+1. Identify the official REVAMP study/publication/protocol/repository and investigators/institution.
+2. Identify the official mechanism for individual-level data access and for biospecimen/DNA access.
+3. Determine requirements such as institutional affiliation, IRB/REC approval, data-use agreement, MTA, research proposal, PI/repository approval, etc.
+4. First seek the minimum feasible query: aggregate counts of eligible persistent-amylophagia cases, controls, relevant missingness, and DNA/biospecimen availability.
+5. Do NOT request names, addresses, direct identifiers, or unnecessary clinical data.
+6. Do NOT claim IRB approval, institutional affiliation, authorization, or existing access unless actually provided.
+7. Do NOT send protected health information through ordinary email or bypass authentication/access controls.
+8. If aggregate feasibility can answer whether ≥30 cases + ≥60 controls exist, stop there before requesting participant-level data or biospecimens.
+9. Draft a short professional feasibility request using only the official access/contact route.
 
-Then audit:
-- attrition chain from REVAMP → IV-FCM → amylophagia → persistent phenotype → iron/Hb eligibility → DNA → final cases
-- whether treatment-arm matching is necessary, redundant, incorrect, or requires more information if all participants are already post-FCM
-- whether ferritin >100 µg/L and Hb ≥110 g/L are defensible and measured at the correct time, or whether continuous variables are preferable
-- whether the phenotype is reproducible and whether binary vs frequency/severity/duration is supported by the actual data
-- best control: matched non-amylophagia, geophagia, resolved amylophagia, or another justified design
-- matching vs adjustment for clinic, gestational age, treatment, ancestry, baseline iron, age, BMI, parity
-- technical validity of duplex ddPCR AMY1/RPP30, AMY1 genomic complexity, reference standards, technical replicates, and need for orthogonal validation
+The target feasibility question is:
+**Can we verify that ≥30 eligible persistent-amylophagia cases and ≥60 eligible non-amylophagia controls with usable DNA exist before proposing an AMY1 experiment?**
 
-Final verdict must be exactly one:
-- GO — READY FOR PILOT SAMPLING
-- GO — WITH SPECIFIC MODIFICATIONS
-- NO-GO — INSUFFICIENT REVAMP DATA
-- NO-GO — PHENOTYPE NOT RECOVERABLE
-- NO-GO — DESIGN CANNOT TEST H-008
-- KILLED
-
-If GO, provide the final minimal protocol. If NO-GO, identify the single missing piece of information that would change the decision.
-
-After this audit, STOP. Do not generate another hypothesis, continue broad searching, or expand H-008 into additional mechanisms.
+## Legal/ethical guardrails
+Only use legitimate, documented access routes. Public aggregate information first. Restricted individual-level data and biospecimens only through the study's formal governance process. No bypassing access controls, scraping private systems, fabricated authorization, or unnecessary PHI requests.
 
 ## Scientific guardrails
 Never allow:
