@@ -98,9 +98,50 @@ The reported locus is approximately 4.5 kb upstream of NPVF. GTEx v8 reportedly 
 
 The Pica/NPVF connection itself was reportedly already described by the GWAS authors, so it must not be claimed as novel merely because Gemini rediscovered it.
 
-## Current research questions
+## Current hypotheses of interest
 
-### Genetic branch
+### H-003 — Trigeminal / Cerebral Perfusion Hypoxia Compensation
+Current status: **N2 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
+
+The strongest useful observation is the rapid pagophagia time course. The proposed endothelial TfR1/eNOS/perfusion chain remains unproven.
+
+### H-005R — 7p15.3 / NPVF Proximal Locus
+Current status: **N1 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
+
+### H-006 — Olfactory Bulb Iron Depletion & Chemosensory Gain / Desiderosmia
+Current status in Gemini's hypothesis pool: **N3 / Moderate / Active**.
+
+This is currently the **next novelty-audit target**, but N3 does NOT mean novel. It means potentially under-investigated.
+
+The important question is:
+
+**Has the specific connection between iron deficiency/brain olfactory biology and desiderosmia/olfactory Pica already been proposed, even under different terminology?**
+
+## Current highest-value next step: H-006 novelty audit
+
+Do NOT broaden the Pica review and do NOT investigate H-003 or H-005R during this cycle.
+
+Gemini should:
+
+1. Search human literature connecting iron deficiency/anemia with desiderosmia, olfactory cravings, geosmin/petrichor/earth smell craving, abnormal smell perception, olfactory sensitivity, parosmia/hyposmia, and Pica terminology that may describe the same phenotype.
+2. Search animal/mechanistic literature connecting brain/olfactory-bulb iron status with olfactory receptor function, olfactory bulb activity, dopamine/neuromodulation, sensory gain, and iron-dependent enzymes.
+3. Perform citation chaining from the strongest relevant papers.
+4. Search explicitly for prior mechanisms that already explain the proposed connection.
+5. Search for evidence against H-006.
+6. Separate established observations, previously proposed mechanisms, plausible inference, and genuinely unreported connections.
+7. If it appears novel, formulate the smallest precise experimentally testable hypothesis.
+8. Generate at least two competing explanations and one discriminating prediction for each.
+9. Never treat failure to find a paper as proof of novelty.
+10. Final classification must be exactly one of:
+   - REJECTED
+   - ALREADY KNOWN
+   - UNDER-INVESTIGATED BUT NOT NOVEL
+   - POTENTIALLY NOVEL HYPOTHESIS
+
+If evidence is insufficient, keep H-006 **UNRESOLVED**.
+
+## Genetic branch
+
 **What is the causal gene/mechanism underlying rs73277282?**
 
 Compare NPVF against credible alternatives using:
@@ -114,12 +155,13 @@ Compare NPVF against credible alternatives using:
 
 Ask: **What evidence would distinguish NPVF from the alternatives?**
 
-### Pagophagia branch
+## Pagophagia branch
+
 **What mechanisms can explain rapid resolution of pagophagia before hematologic normalization?**
 
 Do not assume the answer is endothelial/TfR1. Compare acute peripheral, neural, vascular, metabolic, and other plausible mechanisms.
 
-The next high-value task should be a **causal-edge audit**, not another broad Pica review:
+The next future high-value task after H-006 should be a **causal-edge audit**, not another broad Pica review:
 
 `IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS function → cerebral perfusion → cognitive/alertness effect → pagophagia`
 
@@ -161,6 +203,7 @@ When Gemini returns work:
 7. Avoid unnecessary searches and token-heavy prompts.
 8. Distinguish **resolving a question** from **choosing the most plausible explanation**.
 9. If evidence cannot discriminate, the correct state is **UNRESOLVED**.
+10. For novelty, distinguish **not found** from **not previously proposed**.
 
 ## Resume instruction
 
