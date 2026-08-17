@@ -39,7 +39,7 @@ Use:
 `state → targeted search → synonyms → citation traversal → adjacent field → deeper search only if ranking can change`
 
 Prefer killing/demoting candidates cheaply over accumulating supporting papers.
-Do not generate a new hypothesis while a promising candidate still has an unresolved high-information falsification/novelty question.
+Do not generate a new hypothesis while a promising candidate still has an unresolved high-information falsification/design question.
 
 ## Important previous failures
 
@@ -82,47 +82,51 @@ Critical weakness discovered by Gemini: **zero electrophysiological evidence tha
 Do not promote H-007 to experimental-ready until the missing transduction mechanism has stronger evidence or a more defensible testable intermediate is identified.
 
 ### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagy
-Latest adversarial audit: **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**, ~45%.
+Latest adversarial audit: **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**, ~45%, but this now requires a statistical/experimental-design audit before any further promotion.
 
 Core observation:
 IV iron reportedly failed to resolve amylophagy in the cited REVAMP 2025 RCT while geophagy improved. Gemini proposes:
 `AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
 
 Important caveat: established AMY1 biology is NOT evidence that AMY1 causes amylophagy. The unproven edge is specifically:
-**AMY1 copy number → compulsive non-food starch craving/amylophagy.**
+**AMY1 copy number → compulsive non-food starch craving/amylophagia.**
 
-Proposed immediate test: genotype `AMY1` CNV in relevant clinical cohort/banked DNA and compare persistent amylophagy against geophagy and controls.
-
-Do NOT accept an arbitrary threshold such as OR >4 unless justified prospectively. Effect sizes and statistical design must be evidence-based.
+Proposed test must not assume arbitrary copy-number thresholds or effect sizes. The relevant human phenotype, measurement method, confounders, power, and falsification criterion must be justified prospectively.
 
 ## Current ranking
 
-1. **H-008** — strongest current candidate; potentially novel and experimentally testable.
+1. **H-008** — strongest current candidate; potentially novel and experimentally testable, pending design/statistical audit.
 2. **H-007** — interesting and potentially novel, but critical sensor/transduction evidence is missing.
 
 Do NOT generate H-009 yet.
 
-## Highest-value next step
+## Current highest-value task
 
-Perform a **deep prior-art + causal/statistical design audit of H-008 only** before spending tokens on new hypotheses.
+Perform a **statistical + experimental-design audit of H-008 only**.
 
-Questions:
-1. Has `AMY1 CNV × starch craving × pregnancy × amylophagia` already been studied under different terminology?
-2. Has any human/animal study linked AMY1 genotype or salivary amylase variation to non-food starch craving specifically?
-3. Is the proposed AMY1 → craving pathway biologically defensible, or is it merely an inference from carbohydrate digestion?
-4. What are the strongest alternative explanations for persistent amylophagy after iron repletion?
-5. What confounders could produce an apparent AMY1/amylophagy association?
-6. What sample size/effect size would make the proposed cohort test informative?
-7. What result would decisively falsify H-008?
-8. Does the hypothesis survive a terminology-expanded novelty search and citation chaining?
+Do NOT spend tokens on another broad literature review unless a specific finding is needed to resolve a design question.
 
-The desired endpoint is one of:
-- **KILLED**
-- **DEMOTED**
-- **SURVIVES — NEEDS MORE EVIDENCE**
-- **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**
+Audit:
+1. Whether the REVAMP phenotype is suitable for testing H-008 and how persistent amylophagia should be defined.
+2. Whether binary amylophagia is adequate versus frequency/severity/duration.
+3. Whether any proposed sample size is actually powered; do not assume N=60/group.
+4. What effect sizes are defensible and what sample size can detect them.
+5. Best AMY1 CNV measurement method (ddPCR/qPCR/sequencing/other validated methods).
+6. Whether CNV should be modeled continuously or categorically; no arbitrary ≤4 threshold without evidence.
+7. Appropriate primary statistical model and major confounders: ancestry/population structure, age, BMI, parity, gestational stage, diet/carbohydrate exposure, socioeconomic factors, iron status and treatment response, and other relevant variables.
+8. Which causal edges the human study can actually test versus merely associate.
+9. At least two competing explanations and measurements that discriminate them.
+10. A real falsification criterion using effect-size confidence intervals, meaningful pre-specified effects, power, and equivalence testing if appropriate. Never use p>0.05 alone as proof of falsification.
+11. Whether an existing biobank, a pilot, or a new cohort gives the highest information per sample/cost.
 
-Do not call it a discovery without experimental validation.
+Final verdict must be exactly one of:
+- READY FOR A REAL-WORLD EXPERIMENT
+- NEEDS PILOT DATA FIRST
+- NEEDS MORE MECHANISTIC EVIDENCE
+- DEMOTED
+- KILLED
+
+Do not call H-008 a discovery without experimental validation.
 
 ## Scientific guardrails
 
@@ -135,6 +139,7 @@ Never allow:
 - rapid temporal association → proof of mechanism
 - separate known components → proof of a complete causal chain
 - arbitrary statistical thresholds → evidence
+- p > 0.05 alone → proof of no effect
 
 Classify claims as:
 **ESTABLISHED / DIRECTLY SUPPORTED / INDIRECTLY SUPPORTED / PLAUSIBLE / SPECULATIVE / UNRESOLVED**.
