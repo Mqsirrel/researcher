@@ -1,210 +1,160 @@
 # Supervisor Memory — Pica Research Project
 
 > **Human/ChatGPT supervisor memory. Gemini must not edit this file.**
->
 > If Gemini is asked to modify project state, it must leave this file untouched.
 
 ## Purpose
 
-This file is a compact handoff for a future ChatGPT conversation when the current conversation context or quota is exhausted.
+Compact handoff for future ChatGPT conversations when context/quota runs out.
 
-ChatGPT's role: supervise Gemini as a research intern, audit its claims, choose the highest-value next investigation, prevent token waste, and catch scientific overconfidence.
+ChatGPT supervises Gemini as a research intern: audit claims, choose the highest-information next action, prevent token waste, and catch scientific overconfidence.
 
-Gemini's role: perform the literature/genomic research inside Antigravity.
-
-## Repo
-
-Mqsirrel/researcher
+Gemini performs literature/genomic research inside Antigravity.
 
 ## Research goal
 
-Investigate the biological mechanism of Pica and search for overlooked, genuinely testable mechanisms through iterative literature research.
+Investigate biological mechanisms of Pica and search for overlooked, genuinely testable mechanisms through iterative literature research.
 
-The goal is not a plausible narrative. The standard is:
-
+Standard:
 **evidence → contradictions → competing mechanisms → novelty audit → falsification → discriminating predictions**
 
-## Architecture
+The target is not a plausible narrative. A successful candidate should be an unusual connection that survives prior-art and adversarial causal review and produces a clear testable prediction.
 
-- `GEMINI.md` — scientific research methodology
-- `.agents/hooks.json` — Antigravity lifecycle enforcement
+## Repo architecture
+
+- `GEMINI.md` — methodology
+- `.agents/hooks.json` — lifecycle enforcement
 - `.agents/hooks/research_gate.py` — lightweight research/stop gate
 - `state/` — Gemini's persistent research state
 - `research/SEARCH_POLICY.md` — token-efficient search policy
-- This file — **ChatGPT/supervisor-only handoff memory; do not modify from Gemini**
+- `SUPERVISOR_MEMORY.md` — **ChatGPT/supervisor-only; Gemini must not modify**
 
-## Token-efficiency rule
+## Token strategy
 
-Do not ask Gemini for broad searches when the state/cache already answers the question.
+User has finite Gemini quota. Do NOT optimize for long autonomous runtime or broad literature completeness.
 
-Prefer the smallest investigation that can change the hypothesis ranking.
+Optimize for **information gained per token**.
 
 Use:
+`state → targeted search → synonyms → citation traversal → adjacent field → deeper search only if ranking can change`
 
-`state → targeted search → synonyms → citation traversal → adjacent field → broad/deep search`
-
-Only escalate when needed.
+Prefer killing/demoting candidates cheaply over accumulating supporting papers.
+Do not generate a new hypothesis while a promising candidate still has an unresolved high-information falsification/novelty question.
 
 ## Important previous failures
 
 ### H-005 / NPVF
-Gemini initially promoted H-005 to N4 / Very High confidence and produced an overconfident final report.
+Initially promoted to N4 / Very High with overconfident claims. Later forensic audit found causal NPVF regulation unproven, proximity insufficient, cortisol evidence overgeneralized, RF9 characterization incorrect, and novelty overstated.
 
-A later forensic audit correctly demoted it because:
-
-- causal NPVF regulation was unproven,
-- proximity does not establish causal gene,
-- cortisol evidence was overgeneralized,
-- RF9 was incorrectly treated as a selective NPFFR1 antagonist,
-- novelty was overstated.
-
-Current H-005R remains **PLAUSIBLE BUT UNPROVEN**.
-
-### Stale-state problem
-The hypothesis state was corrected while the final report remained stale. Always check **canonical state ↔ final report consistency**.
+Current H-005R: **PLAUSIBLE BUT UNPROVEN**. The Pica/NPVF connection was reportedly already described by the GWAS authors and must not be called novel merely because Gemini rediscovered it.
 
 ### U-002 / pagophagia
-Gemini identified rapid clinical resolution of pagophagia after IV iron as an important temporal constraint, then prematurely promoted an endothelial/TfR1/eNOS/TRPM8 mechanism to Very High confidence and marked U-002 resolved.
+Gemini prematurely promoted endothelial/TfR1/eNOS/TRPM8 to Very High and marked it resolved. Audit showed rapid symptom resolution constrains timescale but does not identify mechanism.
 
-This was challenged. Rapid symptom resolution does **not** establish the proposed causal chain.
+Current chain remains unproven:
+`IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS → cerebral perfusion → cold-mastication benefit → pagophagia`
 
-The correct interpretation is:
+Do not accept a mechanistic narrative assembled from disconnected papers as demonstrated causality.
 
-**Rapid pagophagia resolution is evidence that constrains the mechanism's timescale; it does not identify the mechanism.**
+### H-006
+Adversarial novelty audit classified H-006 as **UNDER-INVESTIGATED BUT NOT NOVEL**. This was a successful falsification/novelty result, not a project failure.
 
-The proposed chain is currently unproven:
+Lesson: failure to find an exact paper is not novelty; alternative terminology and citation chaining matter.
 
-`IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS function → cerebral perfusion → cold-mastication benefit → pagophagia`
-
-Every causal edge requires direct evidence. Individual components existing in the literature are not sufficient to establish the complete chain.
-
-Do NOT accept:
-- "U-002 resolved" without direct causal evidence.
-- "H-003 Very High" without direct pagophagia-specific evidence.
-- RLS's slower response as proof that pagophagia has an endothelial mechanism.
-- a mechanistic narrative assembled from disconnected papers as demonstrated causality.
-
-## Current important genetic finding
-
-Gemini's forensic audit reports that `rs73277282` is associated with Pica in the cited REDS-III/AoU work, but the causal gene/mechanism is unresolved.
-
-Current H-005R status:
-
-**PLAUSIBLE BUT UNPROVEN**
-
-NPVF is a positional/biological candidate, not an established causal gene.
-
-The reported locus is approximately 4.5 kb upstream of NPVF. GTEx v8 reportedly showed no significant bulk-tissue eQTL for the variant. Other plausible regulatory targets exist, including CYCS and nearby regulatory elements/lncRNAs.
-
-The Pica/NPVF connection itself was reportedly already described by the GWAS authors, so it must not be claimed as novel merely because Gemini rediscovered it.
-
-## Current hypotheses of interest
+## Current hypotheses
 
 ### H-003 — Trigeminal / Cerebral Perfusion Hypoxia Compensation
-Current status: **N2 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
-
-The strongest useful observation is the rapid pagophagia time course. The proposed endothelial TfR1/eNOS/perfusion chain remains unproven.
+**N2 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
+Rapid pagophagia time course is useful, but the endothelial/eNOS/perfusion chain is unproven.
 
 ### H-005R — 7p15.3 / NPVF Proximal Locus
-Current status: **N1 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
+**N1 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
+Causal gene/mechanism unresolved.
 
-### H-006 — Olfactory Bulb Iron Depletion & Chemosensory Gain / Desiderosmia
-Current status in Gemini's hypothesis pool: **N3 / Moderate / Active**.
+### H-007 — Hepatic Portal Vagal Transferrin Sensor
+Latest adversarial audit: **SURVIVES — NEEDS MORE EVIDENCE**, ~30%.
 
-This is currently the **next novelty-audit target**, but N3 does NOT mean novel. It means potentially under-investigated.
+The candidate explains ultra-rapid post-IV-iron pica extinction through:
+`IV iron → rapid TSAT increase → hepatic/periportal sensing → hepatic vagal afferents → NTS/PBN → pica-drive suppression`
 
-The important question is:
+Critical weakness discovered by Gemini: **zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes**. Liver-vagus signaling, hepcidin regulation, and appetite circuitry separately existing do not prove this complete mechanism.
 
-**Has the specific connection between iron deficiency/brain olfactory biology and desiderosmia/olfactory Pica already been proposed, even under different terminology?**
+Do not promote H-007 to experimental-ready until the missing transduction mechanism has stronger evidence or a more defensible testable intermediate is identified.
 
-## Current highest-value next step: H-006 novelty audit
+### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagy
+Latest adversarial audit: **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**, ~45%.
 
-Do NOT broaden the Pica review and do NOT investigate H-003 or H-005R during this cycle.
+Core observation:
+IV iron reportedly failed to resolve amylophagy in the cited REVAMP 2025 RCT while geophagy improved. Gemini proposes:
+`AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
 
-Gemini should:
+Important caveat: established AMY1 biology is NOT evidence that AMY1 causes amylophagy. The unproven edge is specifically:
+**AMY1 copy number → compulsive non-food starch craving/amylophagy.**
 
-1. Search human literature connecting iron deficiency/anemia with desiderosmia, olfactory cravings, geosmin/petrichor/earth smell craving, abnormal smell perception, olfactory sensitivity, parosmia/hyposmia, and Pica terminology that may describe the same phenotype.
-2. Search animal/mechanistic literature connecting brain/olfactory-bulb iron status with olfactory receptor function, olfactory bulb activity, dopamine/neuromodulation, sensory gain, and iron-dependent enzymes.
-3. Perform citation chaining from the strongest relevant papers.
-4. Search explicitly for prior mechanisms that already explain the proposed connection.
-5. Search for evidence against H-006.
-6. Separate established observations, previously proposed mechanisms, plausible inference, and genuinely unreported connections.
-7. If it appears novel, formulate the smallest precise experimentally testable hypothesis.
-8. Generate at least two competing explanations and one discriminating prediction for each.
-9. Never treat failure to find a paper as proof of novelty.
-10. Final classification must be exactly one of:
-   - REJECTED
-   - ALREADY KNOWN
-   - UNDER-INVESTIGATED BUT NOT NOVEL
-   - POTENTIALLY NOVEL HYPOTHESIS
+Proposed immediate test: genotype `AMY1` CNV in relevant clinical cohort/banked DNA and compare persistent amylophagy against geophagy and controls.
 
-If evidence is insufficient, keep H-006 **UNRESOLVED**.
+Do NOT accept an arbitrary threshold such as OR >4 unless justified prospectively. Effect sizes and statistical design must be evidence-based.
 
-## Genetic branch
+## Current ranking
 
-**What is the causal gene/mechanism underlying rs73277282?**
+1. **H-008** — strongest current candidate; potentially novel and experimentally testable.
+2. **H-007** — interesting and potentially novel, but critical sensor/transduction evidence is missing.
 
-Compare NPVF against credible alternatives using:
-1. fine-mapping / LD
-2. chromatin accessibility
-3. enhancer/promoter evidence
-4. brain/hypothalamus-specific regulatory data
-5. eQTL / colocalization
-6. allele-specific evidence
-7. relevant human/animal functional evidence
+Do NOT generate H-009 yet.
 
-Ask: **What evidence would distinguish NPVF from the alternatives?**
+## Highest-value next step
 
-## Pagophagia branch
+Perform a **deep prior-art + causal/statistical design audit of H-008 only** before spending tokens on new hypotheses.
 
-**What mechanisms can explain rapid resolution of pagophagia before hematologic normalization?**
+Questions:
+1. Has `AMY1 CNV × starch craving × pregnancy × amylophagia` already been studied under different terminology?
+2. Has any human/animal study linked AMY1 genotype or salivary amylase variation to non-food starch craving specifically?
+3. Is the proposed AMY1 → craving pathway biologically defensible, or is it merely an inference from carbohydrate digestion?
+4. What are the strongest alternative explanations for persistent amylophagy after iron repletion?
+5. What confounders could produce an apparent AMY1/amylophagy association?
+6. What sample size/effect size would make the proposed cohort test informative?
+7. What result would decisively falsify H-008?
+8. Does the hypothesis survive a terminology-expanded novelty search and citation chaining?
 
-Do not assume the answer is endothelial/TfR1. Compare acute peripheral, neural, vascular, metabolic, and other plausible mechanisms.
+The desired endpoint is one of:
+- **KILLED**
+- **DEMOTED**
+- **SURVIVES — NEEDS MORE EVIDENCE**
+- **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**
 
-The next future high-value task after H-006 should be a **causal-edge audit**, not another broad Pica review:
-
-`IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS function → cerebral perfusion → cognitive/alertness effect → pagophagia`
-
-For each edge classify:
-**DIRECTLY DEMONSTRATED / INDIRECTLY SUPPORTED / SPECULATIVE / CONTRADICTED**.
-
-Then identify the weakest edge and the single experiment/observation that would most strongly discriminate the endothelial model from the best alternative.
+Do not call it a discovery without experimental validation.
 
 ## Scientific guardrails
 
 Never allow:
-
 - correlation → causation
 - genomic proximity → causal gene
 - plausibility → evidence
 - absence of literature → novelty
-- one citation → support for claims it did not actually test
-- rapid temporal association → proof of a specific mechanism
-- existence of separate components → proof of the full causal chain
+- one citation → support for claims it did not test
+- rapid temporal association → proof of mechanism
+- separate known components → proof of a complete causal chain
+- arbitrary statistical thresholds → evidence
 
 Classify claims as:
+**ESTABLISHED / DIRECTLY SUPPORTED / INDIRECTLY SUPPORTED / PLAUSIBLE / SPECULATIVE / UNRESOLVED**.
 
-**ESTABLISHED / DIRECTLY SUPPORTED / INDIRECTLY SUPPORTED / PLAUSIBLE / SPECULATIVE / UNRESOLVED**
-
-For novel candidates, require aggressive prior-art search and adversarial review.
-
-A final conclusion should say **Potentially novel hypothesis requiring experimental validation**, not claim a discovery, unless experimental evidence exists.
+For novelty, distinguish **not found** from **not previously proposed**.
 
 ## How ChatGPT should manage Gemini
 
 When Gemini returns work:
-
-1. Check whether the evidence supports the claim.
+1. Check whether evidence supports the claim.
 2. Find the weakest causal edge.
 3. Give Gemini the smallest high-value next task.
 4. Prefer falsification over confirmation.
-5. Treat a correctly rejected hypothesis as successful research.
-6. Check state/report consistency.
+5. Treat correctly rejected hypotheses as successful research.
+6. Check canonical state/report consistency.
 7. Avoid unnecessary searches and token-heavy prompts.
-8. Distinguish **resolving a question** from **choosing the most plausible explanation**.
-9. If evidence cannot discriminate, the correct state is **UNRESOLVED**.
-10. For novelty, distinguish **not found** from **not previously proposed**.
+8. Distinguish resolving a question from choosing the most plausible explanation.
+9. If evidence cannot discriminate, keep it **UNRESOLVED**.
+10. Only spend additional quota on a candidate when the next search/analysis can materially change its ranking.
 
 ## Resume instruction
 
-When this file is supplied in a new ChatGPT conversation, first inspect the current repo state and Gemini's latest changes. Then tell the user the **single highest-information next action**, rather than restarting the research from scratch.
+When this file is supplied in a new ChatGPT conversation, inspect the latest repo commits/state first. Then give the user the **single highest-information next action** rather than restarting the research.
