@@ -9,48 +9,21 @@ Pica is not a single biological entity, but a set of distinct consumptive and se
 3. **Amylophagia (Raw Starch / Flour):** Craving uncooked starch (cornstarch, raw rice, cassava). Distinct response profile from geophagy in clinical trials (e.g., REVAMP RCT in Malawi, 2025).
 4. **Desiderosmia (Olfactory Pica Variant):** Compulsive craving to inhale volatile scents (wet earth/petrichor, pine cleaner, damp chalk, gasoline, brick dust) in severe iron deficiency, often preceding or co-occurring with geophagy.
 
-### B. Genetic Architecture
-- **GWAS in Blood Donors (REDS-III & All of Us, N=12,157):** Identified genome-wide significant association (`rs73277282`, $p = 1.53 \times 10^{-8}$) in a 7p15.3 non-coding intergenic region near the **Neuropeptide VF (NPVF)** gene. Functional eQTL causal mechanism remains unverified.
+### B. Genetic Architecture (7p15.3 Locus)
+- **REDS-III GWAS (PMID 41708529, N=12,157):** Identified genome-wide significant association (`rs73277282`, $p = 1.53 \times 10^{-8}$) located 4.5 kb upstream of *NPVF* on chromosome 7p15.3, replicated in *All of Us*. Functional causal mechanism (eQTL status) in human hypothalamic tissue remains unverified.
 
-### C. Neurochemical & Physiological Observations
-- **Iron as Tyrosine Hydroxylase Cofactor:** Iron deficiency selectively downregulates central D2 receptor density and presynaptic dopamine synthesis in the ventral striatum and substantia nigra, sharing pathophysiology with Restless Legs Syndrome (RLS).
-- **Trigeminal Reflex & Cerebral Perfusion (Hunt et al., 2014):** Ice mastication triggers cold-sensing trigeminal afferents and sympathetic activation, increasing cerebral perfusion velocity to transiently relieve cognitive fatigue caused by anemic cerebral hypoxia.
-- **Endocrine Factors:** High cortisol is observed in pregnant pica cohorts (PMID 38050975), but generalized hypercortisolemia is unverified in non-pregnant adult blood donors.
-
----
-
-## 2. Mechanistic Knowledge Graph
-
-```
-[Systemic Iron Deficiency & Hypoxia]
-       │
-       ├─────────────────────────────────────────┐
-       ▼                                         ▼
-[Tyrosine Hydroxylase Depletion & Striatal D2 ↓]  [Cerebral Hypoperfusion & Fatigue]
-       │                                         │
-       ▼                                         ▼
-[Compulsive Consummatory Drive]           [TRPM8 Cold Mastication via Ice]
-       │                                         │
-       │                                         ▼
-       │                                  [Cerebral Blood Flow Velocity ↑]
-       │                                  (Hunt et al. Pagophagia Model)
-       │
-       ├─────────────────────────────────────────┐
-       ▼                                         ▼
-[Olfactory Bulb Hyper-gain]               [7p15.3 (NPVF locus) Modifier?]
-  → [Desiderosmia / Geophagia]               → [Altered Orexigenic Threshold?]
-```
+### C. Neurochemical & Physiological Mechanisms
+- **Striatal Dopaminergic Hypoactivity (H-002):** Iron is a non-heme cofactor for Tyrosine Hydroxylase (TH). Iron deficiency selectively depletes striatal dopamine synthesis and D2 receptor density, sharing biological pathways with Restless Legs Syndrome (RLS).
+- **Trigeminal Reflex & Cerebral Perfusion (H-003, Hunt et al., 2014):** Ice mastication stimulates oral cold-sensing trigeminal afferents (TRPM8), increasing middle cerebral artery blood flow velocity to relieve cognitive fatigue from anemic hypoxia.
 
 ---
 
-## 3. Evidence Classification Matrix
+## 2. Evidence Hierarchy & Status
 
-| Claim | Evidence Category | Justification / Source |
+| Fact / Claim | Status | Primary Grounding |
 | :--- | :---: | :--- |
-| **Pica resolves with IV iron in IDA** | **ESTABLISHED** | Multiple RCTs and clinical series (e.g. REVAMP 2025). |
-| **Ice chewing increases alertness in IDA** | **ESTABLISHED** | Controlled cognitive study (Hunt et al., 2014). |
-| **Iron is cofactor for Tyrosine Hydroxylase** | **ESTABLISHED** | Decades of biochemical & neuroimaging literature. |
-| **`rs73277282` is statistically associated with Pica** | **ESTABLISHED** | REDS-III GWAS (PMID 41708529, $N=12,157$). |
-| **`rs73277282` regulates *NPVF* transcription in humans** | **INDIRECT / UNPROVEN** | Intergenic variant in 7p15.3 gene desert; lacks direct eQTL proof. |
-| **Glucocorticoids/Cortisol cause Pica via NPVF** | **SPECULATIVE / WEAK** | Confounded by gestational physiology; unproven in non-pregnant cohorts. |
-| **RF9 is a selective NPFFR1 antagonist in Pica** | **FALSE / DEAD END** | RF9 is an active KISS1R agonist with broad off-target activity. |
+| **`rs73277282` associates with Pica in blood donors** | **ESTABLISHED** | REDS-III GWAS (Transfusion 2026, PMID 41708529). |
+| **`rs73277282` is 4.5 kb upstream of `NPVF`** | **ESTABLISHED** | Ensembl GRCh38 mapping (`chr7:25233039`). |
+| **`rs73277282` alters `NPVF` transcription in humans** | **UNPROVEN** | 0 significant eQTLs in GTEx v8; lacks hypothalamic functional assays. |
+| **Alternative gene `CYCS` is 107.6 kb away** | **ESTABLISHED** | Ensembl GRCh38 mapping (`chr7:25080179`). |
+| **NPVF causes non-food pica in animal models** | **UNTESTED** | Literature only demonstrates caloric chow feeding. |

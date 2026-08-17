@@ -4,9 +4,7 @@ Record meaningful literature searches so future cycles reuse results instead of 
 
 | Query / Concept | Date | Sources Searched | Key Result | Coverage | Re-search When |
 |---|---|---|---|---|---|
-| Pica mechanism & iron deficiency reviews | 2026-08-17 | PubMed E-utilities | Identified 2026 GWAS on blood donors (`NPVF` association) and 2026 papers on Desiderosmia & Olfactory pica. | High | New review published |
-| Sera Young & RCTs of IV iron on Pica | 2026-08-17 | PubMed (PMID 40368302) | REVAMP 2025 RCT in Malawi: FCM significantly reduced geophagy (PR=0.53) but had no significant effect on amylophagy or pagophagy. | Complete | 1-year follow-up data released |
-| Hunt 2014 Pagophagia / Chewing Ice | 2026-08-17 | Medical Hypotheses / Web | Chewing ice triggers peripheral vasoconstriction & increased cerebral blood flow, selectively improving cognitive speed in anemic hypoxia. | Complete | Human fMRI/TCD study published |
+| Ensembl GRCh38 mapping for rs73277282 & 7p15.3 | 2026-08-17 | Ensembl REST API | rs73277282 is at chr7:25233039, exactly 4,553 bp upstream of NPVF 5' start site; CYCS is 107.6 kb upstream; SPMIP4 is 52.6 kb upstream. | Complete | Assembly update |
+| GTEx v8 Single-Tissue eQTL for rs73277282 | 2026-08-17 | GTEx Portal API | 0 statistically significant eQTLs across GTEx v8 bulk tissues (NPVF expression is restricted to tiny hypothalamic subnuclei). | Complete | GTEx v10 released |
+| Trait associations for rs73277282 in UK Biobank / GWAS | 2026-08-17 | OpenGWAS & PubMed | Primary trait association is pica in repeated blood donors (REDS-III, PMID 41708529, replicated in All of Us). | Complete | New blood donor GWAS |
 | RF9 Selectivity & Off-Targets (NPFFR1 / KISS1R) | 2026-08-17 | PubMed & Pharmacological reviews | RF9 is an active agonist at KISS1R (GPR54) with potent LH-releasing effects in Npffr1 KO mice, invalidating in vivo NPFFR1 selectivity. | Complete | Novel antagonist published |
-| 7p15.3 Genomic Locus & rs73277282 | 2026-08-17 | NCBI dbSNP & Genomics literature | rs73277282 is intergenic in a 500-600 kb gene desert near NPVF, flanked by MIR148A, NFE2L3, and super-enhancers. Lacks direct eQTL proof. | High | Hypothalamic Hi-C published |
-| Cortisol in Non-Pregnant Iron Deficiency | 2026-08-17 | PubMed & Endocrine reviews | Iron deficiency does not consistently elevate systemic cortisol in non-pregnant adults; maternal cortisol is largely gestational/placental. | High | Large cohort study published |
