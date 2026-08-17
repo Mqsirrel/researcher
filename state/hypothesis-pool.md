@@ -1,35 +1,39 @@
 # Hypothesis Pool
 
-Maintain multiple competing explanations with explicit predictions, falsifiers, and novelty rankings.
+Maintain multiple competing explanations with explicit predictions, falsifiers, and calibrated novelty/confidence rankings.
 
-| ID | Hypothesis | Evidence Base | Decisive Contradictions | Novelty Level | Confidence | Status |
+| ID | Hypothesis | Evidence Base | Decisive Contradictions / Major Vulnerabilities | Novelty Level | Confidence | Status |
 |---|---|---|---|---|---|---|
-| **H-001** | **Nutritional Sparing & Compensatory Drive Model** | Widespread correlation with low ferritin, response to iron therapy. | Fails to explain pagophagia (ice has 0 Fe) or geophagy clay chelation (binds Fe). | **N0 (Established)** | Moderate | Active |
-| **H-002** | **Striatal Tyrosine Hydroxylase / D2 Hypoactivity Model** | Iron is an essential cofactor for TH; iron deficiency reduces D2 density and dopamine synthesis. | Does not explain why specific non-food items are selected rather than general hyperphagia. | **N1 (Proposed)** | Moderate | Active |
-| **H-003** | **Trigeminal / Cerebral Perfusion Hypoxia Compensation Model** | Ice chewing improves cognitive speed and alertness selectively in anemic patients (Hunt et al., 2014). | Specific to pagophagia; does not explain geophagy or amylophagy. | **N2 (Under-investigated)** | High (for Ice) | Active |
-| **H-004** | **GI Mucosal Coating & Enterotoxin Sequestration Model** | Smectite/kaolin clays bind bacterial toxins and plant tannins; colobus monkeys prefer clay-rich over iron-rich soils. | Explains geophagy as protection, but does not explain non-toxic pregnancy or ice pica. | **N1 (Proposed)** | High (for Clay) | Active |
-| **H-005** | **Unified Stress–NPVF–Sensory Gating Model (The Cortisol–RFRP3–NPFFR1 Axis)** | Integrates 2026 GWAS (`rs73277282` at *NPVF*), glucocorticoid induction of RFRP-3 transcription, and elevated cortisol in maternal pica. | Full pathway requires direct in vivo testing in iron-deficient rodent models using NPFFR1 antagonists (RF9). | **N4 (Potentially Novel Unified Mechanism)** | **Very High** | **Leading Model** |
-| **H-006** | **Olfactory Bulb Iron Depletion & Chemosensory Gain (Desiderosmia) Model** | High olfactory bulb iron turnover; iron deficiency triggers intense desiderosmia for petrichor/geosmin. | Needs electroolfactogram data in clinical iron-deficiency cohorts. | **N3 (Unrecognized Connection)** | Moderate-High | Active |
+| **H-001** | **Nutritional Sparing & Compensatory Drive Model** | Widespread correlation with low ferritin, response to iron therapy. | Fails to explain pagophagia (ice has 0 Fe) or geophagy clay chelation (binds Fe). | **N0 (Established)** | Moderate | Active (Baseline) |
+| **H-002** | **Striatal Tyrosine Hydroxylase / D2 Hypoactivity Model** | Iron is an essential cofactor for TH; iron deficiency reduces D2 density and dopamine synthesis in striatum; strong clinical overlap with RLS. | Does not explain substance-specific sensory selection (ice vs. clay) without peripheral gating. | **N1 (Proposed)** | **High** | **Leading Model (Bio-behavioral)** |
+| **H-003** | **Trigeminal / Cerebral Perfusion Hypoxia Compensation Model** | Ice chewing improves cognitive speed and alertness selectively in anemic patients (Hunt et al., 2014); TRPM8/sympathetic activation increases MCA blood flow velocity. | Highly specific to pagophagia; does not explain geophagy or amylophagy. | **N2 (Under-investigated)** | **High (for Pagophagia)** | **Leading Model (Subtype Specific)** |
+| **H-004** | **GI Mucosal Coating & Enterotoxin Sequestration Model** | Smectite/kaolin clays bind bacterial toxins and plant tannins; colobus monkeys prefer clay-rich over iron-rich soils. | Explains geophagy as adaptive barrier protection, but fails for non-toxic pregnancy or ice pica. | **N1 (Proposed)** | **High (for Geophagy)** | Active (Subtype Specific) |
+| **H-005** | **Hypothalamic NPVF Genetic Vulnerability / Appetite Multiplier Model (Refactored)** | REDS-III GWAS (`rs73277282` at 7p15.3 near *NPVF*, replicated in All of Us); NPVF is an orexigenic peptide acting via NPFFR1. | `rs73277282` is in a non-coding gene desert (functional eQTL unproven); NPVF stimulates caloric chow, not non-food pica; RF9 is an unselective KISS1R agonist; cortisol link is weak/confounded. | **N2 (Under-investigated Genetic Candidate)** | **Low-Moderate (25-30%)** | **Demoted / Refactored** |
+| **H-006** | **Olfactory Bulb Iron Depletion & Chemosensory Gain (Desiderosmia) Model** | Olfactory bulb has highest brain iron turnover; iron deficiency triggers intense desiderosmia for petrichor/geosmin. | Needs electroolfactogram data in clinical iron-deficiency cohorts; doesn't explain ice. | **N3 (Unrecognized Connection)** | Moderate | Active |
 
 ---
 
-## Detailed Specification: Leading Candidate (H-005)
+## Adversarial Audit & Refactoring: H-005
 
-### Mechanistic Architecture
-1. **Trigger / Sensor:** Systemic iron deficiency and tissue hypoxia stimulate the hypothalamic-pituitary-adrenal (HPA) axis, driving sustained elevations in circulating glucocorticoids (cortisol / CORT).
-2. **Transcriptional Activation:** Elevated glucocorticoids bind Glucocorticoid Receptors (GR) that bind glucocorticoid response elements in the *NPVF* promoter, robustly upregulating Neuropeptide VF (RFRP-3) synthesis in the dorsomedial and arcuate hypothalamic nuclei. This response is potentiated in carriers of the `rs73277282` risk allele.
-3. **Appetitive Gating:** Secreted NPVF binds **NPFFR1 (GPR147)** on downstream hypothalamic and VTA circuits, suppressing anorexigenic POMC tone and disinhibiting non-specific oral consummatory drives.
-4. **Phenotype Channeling:**
-   - In patients experiencing anemic cognitive fatigue, the non-specific drive is channeled into ice chewing (pagophagia) via positive reinforcement from TRPM8-mediated cerebral blood flow restoration.
-   - In patients with elevated olfactory bulb chemosensitivity, the drive is channeled into geophagia (soil/clay craving) or desiderosmia (petrichor craving).
+### 1. What Failed the Audit
+- **Universal Cortisol / HPA Drive:** Conflated a small, exploratory pregnant cohort ($N=34$, PMID 38050975) with general pica etiology. Blood donors with pica lack evidence of systemic hypercortisolemia.
+- **RF9 as a Selective Antagonist:** RF9 is a known potent agonist at **KISS1R (GPR54)** and lacks in vivo selectivity for NPFFR1. It cannot be used as a definitive test of NPFFR1 blockade.
+- **Direct Causal Attribution of `rs73277282`:** The SNP lies in an intergenic region on 7p15.3 flanked by super-enhancers that could regulate other neighboring or distant genes (*MIR148A*, *NFE2L3*, *HOXA*).
+- **Novelty Rating Inflation:** Labeling H-005 as N4 / Very High Confidence was an error. Linking a known GWAS candidate (*NPVF*) to its existing literature is N2 at best.
 
-### Falsification & Adversarial Red-Team Analysis
-- **Objection 1:** *Why doesn't every stressed person develop pica?*
-  - **Rebuttal:** Pica requires the confluence of high cortisol **plus** intracellular iron depletion (which alters striatal dopamine salience and sensory thresholds) **plus** genetic susceptibility (`rs73277282`).
-- **Objection 2:** *What is the decisive experiment to falsify H-005?*
-  - **Falsification Criterion:** In iron-deficient, pica-expressing animal models, administration of the selective NPFFR1 antagonist **RF9** must suppress non-food consumption (ice/clay seeking) without causing general adipsia or motor impairment. If RF9 has zero effect on pica behaviors in iron-deficient models, H-005 is falsified.
+### 2. The Surviving Refactored Model (H-005R)
+`rs73277282` acts as a regulatory modifier in the 7p15.3 locus that enhances hypothalamic *NPVF* orexigenic responsiveness under metabolic/anemic stress. Elevated NPVF signaling lowers the general threshold for consummatory seeking, which is then shaped into pica by striatal dopamine depletion (H-002) and peripheral sensory feedback (H-003, H-004, H-006).
 
-### Concrete Discriminating Predictions
-1. **Prediction 1 (Biomarker):** Serum NPVF / RFRP-3 peptide concentrations are significantly elevated in iron-deficient patients with active pica compared to iron-deficient patients without pica.
-2. **Prediction 2 (Pharmacological):** Intracerebroventricular or systemic administration of NPFFR1 antagonists rapidly abolishes pica in iron-deficient animals before hematocrit normalization.
-3. **Prediction 3 (Genetic / Cellular):** The `rs73277282` risk variant enhances transcription factor binding or reporter gene expression in hypothalamic neuronal lines under dexamethasone/hydrocortisone stimulation.
+---
+
+## Discriminating Predictions (H-005R vs. H-002/H-003)
+
+1. **Prediction 1 (Genotype Stratification in Severe IDA):**
+   - *H-005R:* In severe iron deficiency (ferritin $<10$ ng/mL), pica will be significantly enriched in `rs73277282` risk allele carriers, whereas non-carriers will exhibit anemia and fatigue without non-food cravings.
+   - *H-002/H-003:* Pica penetrance depends strictly on the degree of striatal iron depletion or cerebral hypoperfusion, regardless of `rs73277282`.
+2. **Prediction 2 (Hypothalamic *Npffr1* Knockdown in Rodents):**
+   - *H-005R:* Targeted viral knockdown of *Npffr1* in the DMH/arcuate nucleus will attenuate non-food ingestion in iron-deficient rodents without restoring systemic iron or hematocrit.
+   - *H-002:* Only dopamine D2/D3 receptor agonists (e.g. pramipexole) will suppress pica; *Npffr1* knockdown will have no effect.
+3. **Prediction 3 (Caloric Food vs. Non-Food Satiation):**
+   - *H-005R:* Ingestion of high-calorie food will activate standard satiety circuits and suppress NPVF-driven pica urges.
+   - *H-003:* Caloric food will fail to relieve pagophagia, which requires oral cold (TRPM8) to restore cerebral perfusion velocity.

@@ -2,8 +2,10 @@
 
 Record rejected hypotheses and misleading paradigms so future cycles do not waste effort on known dead ends.
 
-| ID | Hypothesis / Concept | Why Investigated | Decisive Evidence / Contradiction | Reconsider If |
+| ID | Hypothesis / Premise | Why Investigated | Decisive Evidence / Contradiction | Reconsider If |
 |---|---|---|---|---|
 | **D-001** | **Monolithic Iron-Deficiency Model for All Pica Subtypes** | Universal assumption that all pica subtypes share the identical single etiology of low ferritin. | **Falsified by REVAMP RCT (2025, PMID 40368302):** Ferric carboxymaltose resolved geophagy (PR=0.53) but failed to significantly reduce amylophagy or pagophagy in the same cohort. | A subgroup analysis proves differing dosage thresholds. |
 | **D-002** | **Direct Rodent Kaolin Ingestion as Model for Human Pagophagia** | Extrapolating rodent non-food consumption to all human pica. | **Neurobiological divergence:** Rodents consume kaolin as a surrogate for nausea (visceral malaise) because they lack the emetic reflex, whereas human pagophagia is driven by cognitive fatigue / cerebral perfusion enhancement. | A non-emetic mammal exhibits pagophagia under iron deficiency. |
 | **D-003** | **Ice as a Trace Mineral Source** | Speculation that pagophagia is an instinctive search for trace minerals in water/ice. | Pure deionized ice elicits the exact same relief and craving as tap water ice; mineral content is negligible ($<0.001$ mg Fe/kg). | Mineral-depleted vs. mineralized ice double-blind preference is shown. |
+| **D-004** | **RF9 as a Selective NPFFR1 Antagonist to Test Pica in Vivo** | Proposed as a definitive pharmacological test for NPFFR1 in H-005. | **Pharmacological invalidation:** RF9 is a potent agonist at **KISS1R (GPR54)** and stimulates the HPG axis via kisspeptin receptors, invalidating in vivo selectivity for NPFFR1. | A truly selective, validated non-peptide antagonist is developed. |
+| **D-005** | **Universal Glucocorticoid / Cortisol Mechanism for All Pica** | Proposed as universal upstream driver of NPVF-mediated pica. | **Lack of generalization:** Elevated cortisol was observed in a small pregnant cohort ($N=34$, confounded by placental CRH), but healthy blood donors who develop pica from phlebotomy do not have systemic hypercortisolemia. | Large biobanks show elevated cortisol across all non-pregnant pica cases. |
