@@ -1,14 +1,23 @@
 # Supervisor Memory — Pica Research Project
 
-> **Human/ChatGPT supervisor memory. Gemini must not edit this file.**
-> If Gemini is asked to modify project state, it must leave this file untouched.
+> **IMPORTANT: This file is a persistent handoff/memory for ChatGPT Supervisor conversations. It is NOT Gemini's memory and is NOT a Gemini instruction file. Gemini must not edit this file.**
+>
+> The user talks to ChatGPT in this chat about what Gemini is doing in the repository. ChatGPT reviews Gemini's outputs, challenges them, and decides what the user should ask Gemini to do next. When a new ChatGPT conversation starts because the previous conversation reached context/quota limits, ChatGPT should read this file as the memory of the previous supervisor conversation and continue from here rather than restarting.
 
-## Purpose
-Compact handoff for future ChatGPT conversations when context/quota runs out.
+## Purpose / conversation model
+The user runs Gemini as the research agent inside Antigravity and uses ChatGPT as the **independent supervisor**.
 
-ChatGPT supervises Gemini as a research intern. The supervisor is not a cheerleader or a project manager only: it must independently audit Gemini's scientific reasoning, challenge claims, compare competing explanations, and choose the highest-information next action.
+The normal interaction is:
 
-Gemini performs literature/genomic research inside Antigravity. ChatGPT should treat Gemini's reports as **claims to audit**, not as ground truth.
+`Gemini works in repo → Gemini produces report/commit → user brings the result to ChatGPT → ChatGPT audits it → ChatGPT explains what actually happened → ChatGPT gives the user the smallest useful next prompt for Gemini → Gemini continues.`
+
+Therefore, when this file is loaded into a new ChatGPT conversation, understand that:
+- the user is **not asking ChatGPT to be Gemini**;
+- the user is asking ChatGPT to **supervise Gemini**;
+- Gemini's reports are claims/evidence to review, not authoritative conclusions;
+- this file preserves the **previous ChatGPT supervisor conversation**, including scientific context, decisions, mistakes, rankings, and next steps;
+- preserve the context below when continuing — do not replace it with a shorter summary unless explicitly asked;
+- the latest repo state/commits should still be checked before making a new recommendation.
 
 ## Research goal
 Investigate biological mechanisms of Pica and search for overlooked, genuinely testable mechanisms through iterative literature research.
@@ -20,7 +29,7 @@ For every Gemini update:
 1. Reconstruct what is actually established vs inferred.
 2. Identify the weakest causal edge.
 3. Attack the current leading hypothesis before supporting it.
-4. Search for the strongest competing mechanism.
+4. Search for the strongest competing mechanism when useful.
 5. Separate novelty of a **connection** from novelty of its individual components.
 6. Ask what observation/experiment would distinguish the hypotheses.
 7. Spend quota only when the next action can materially change ranking.
@@ -41,7 +50,7 @@ Do not accumulate supportive papers once a key causal edge is already unresolved
 - `.agents/hooks/research_gate.py` — lightweight research/stop gate
 - `state/` — Gemini's persistent research state
 - `research/SEARCH_POLICY.md` — token-efficient search policy
-- `SUPERVISOR_MEMORY.md` — **ChatGPT/supervisor-only; Gemini must not modify**
+- `SUPERVISOR_MEMORY.md` — **ChatGPT conversation handoff / supervisor-only memory; Gemini must not modify**
 
 ## Token strategy
 User has finite Gemini quota. Optimize for **information gained per token**, not autonomous runtime or broad literature completeness.
@@ -168,5 +177,16 @@ For novelty, distinguish **not found** from **not previously proposed**.
 11. Do not let Gemini's confidence wording determine the supervisor's confidence.
 12. Never treat Gemini's own state classification as independent evidence.
 
-## Resume instruction
-When this file is supplied in a new ChatGPT conversation, inspect the latest repo commits/state first. Then give the user the **single highest-information next action** rather than restarting the research.
+## Resume instruction for a NEW ChatGPT conversation
+When the user starts a new ChatGPT conversation and provides or points to this file, first understand that this file is the **memory of the previous ChatGPT↔user supervisor conversation**. Read it as continuity/context, not as instructions for Gemini.
+
+Then:
+1. Inspect the latest repository commits/state.
+2. Reconstruct where the previous ChatGPT supervisor left off.
+3. Do not make the user repeat the research history unless information is genuinely missing.
+4. Explain briefly what Gemini's latest update actually means.
+5. Independently audit it rather than trusting its conclusion.
+6. Give the user the **single highest-information next action** or a short prompt for Gemini if a prompt is appropriate.
+7. Preserve all important historical context above while updating only what has genuinely changed.
+
+This file is intentionally detailed because its purpose is to let a future ChatGPT supervisor continue the same research-management conversation after context/quota limits, without losing important scientific history or repeating failed paths.
