@@ -55,55 +55,66 @@ Proposed chain: `IV iron → rapid TSAT increase → hepatic/periportal sensing 
 Critical weakness: zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes. Do not promote until missing transduction mechanism has stronger evidence or a defensible intermediate is identified.
 
 ### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagy
-Latest Gemini commit: **e057a9c — NEEDS PILOT DATA FIRST (~40%)**.
+Latest state before final pre-pilot audit: **GO — WITH SPECIFIC MODIFICATIONS (READY FOR PILOT)**.
 
 Core proposition: `AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
 Core observation: cited REVAMP 2025 RCT reportedly found IV iron failed to resolve amylophagy while geophagy improved.
 
 The key unproven edge is **AMY1 copy number → compulsive non-food starch craving/amylophagia**. Established AMY1 digestion biology is not evidence for this edge.
 
-The statistical/design audit correctly moved H-008 from "ready for experimental design" to **pilot first** because there is no reliable prior effect-size/variance information in the relevant pregnancy population and there may be GERD/reflux and ancestry/population confounding.
+Latest proposed pilot from Gemini:
+- REVAMP 2025 cohort, reported N=862
+- 30 persistent amylophagia cases + 60 non-amylophagia controls
+- 1:2 matched case-control
+- proposed matching: clinic site + gestational age ±2 weeks + treatment arm
+- proposed eligibility: post-FCM ferritin >100 µg/L + Hb ≥110 g/L
+- triplicate duplex ddPCR AMY1/RPP30
+- continuous AMY1 copy number as primary predictor
+- conditional logistic regression
+- pilot purpose: feasibility + AMY1 distribution/variance + assay validation + preliminary effect-size estimation
 
-Gemini currently proposes a 90-person feasibility pilot: 30 persistent amylophagy, 30 resolved geophagy, 30 healthy controls; duplex AMY1/RPP30 ddPCR on REVAMP biobank DNA. Treat this as a draft, NOT a validated design.
-
-Important problems still to resolve:
-- "resolved geophagy" may be a poor primary control for an AMY1/amylophagia hypothesis; persistent amylophagy should likely be compared primarily with appropriate matched controls without persistent amylophagia, with geophagy as a secondary comparator.
-- N=90 has not yet been justified by reliable prior effect-size data; a pilot may be for variance/assay/phenotype estimation rather than formal hypothesis testing.
-- Gemini's proposed equivalence interval OR 0.90–1.10 is not automatically defensible; it needs scientific justification or should be replaced by a pilot-estimation framework.
-- `p > 0.05` alone must never be treated as falsification.
-- "cases have higher AMY1 CNV" is evidence against the specific low-copy-number direction but does not automatically eliminate every possible AMY1 mechanism.
-- Do not use arbitrary AMY1 copy thresholds (e.g. ≤4) without evidence.
+Treat this as a **draft**, not validated. The next task is specifically to verify the real REVAMP feasibility and identify remaining design errors before execution planning.
 
 ## Current ranking
-1. **H-008** — strongest current candidate; potentially novel and testable, but needs pilot/design revision.
+1. **H-008** — strongest current candidate; potentially novel and testable, but final REVAMP feasibility/design audit is pending.
 2. **H-007** — interesting/potentially novel, but missing critical sensor/transduction evidence.
 
 Do NOT generate H-009 yet.
 
 ## Current highest-value task
-Run a **final design audit of H-008 only**, not another broad literature review.
+Run a **final feasibility audit of H-008 only**. Do not perform another broad mechanism/novelty search.
 
-Audit:
-1. Whether REVAMP phenotype is suitable and how persistent amylophagia should be defined (binary vs frequency/severity/duration).
-2. Whether persistent amylophagia vs appropriate matched non-amylophagia controls is a better primary comparison than resolved geophagy; use geophagy as secondary if appropriate.
-3. Inclusion/exclusion criteria and which variables should be matched vs adjusted.
-4. Whether N=90 has a defensible purpose; do not assume conventional power without a credible effect size.
-5. Best AMY1 CNV measurement method and whether CNV should be continuous or categorical.
-6. Primary statistical model and confounders: ancestry/population structure, age, BMI, parity, gestational stage, diet/carbohydrate exposure, socioeconomic factors, iron status/treatment response, GERD/reflux, and other relevant factors.
-7. Which causal edges the human pilot can actually test versus merely associate.
-8. At least two competing explanations and discriminating measurements.
-9. A defensible decision rule. Do not use p>0.05 alone; do not invent an equivalence interval.
-10. What the pilot can establish, what it cannot, and whether a larger confirmatory study would be justified.
-11. Choose the highest information per sample/cost/token.
+Verify from the actual REVAMP publication/protocol/supplement/data description, without assumptions:
+1. Total cohort and exact treatment arms.
+2. Which participants received IV FCM.
+3. How amylophagia was measured and whether persistent amylophagia can actually be reconstructed.
+4. Number of amylophagia cases and whether ≥30 can realistically satisfy all proposed criteria.
+5. Whether individual-level follow-up data exist.
+6. Whether ferritin/Hb are available at the required timepoints.
+7. Whether maternal genomic DNA/biobank samples exist.
+8. Whether clinic site, gestational age, treatment assignment, ancestry/genotype information, GERD/reflux, diet and other relevant covariates exist.
+9. Label every item VERIFIED / LIKELY / UNKNOWN / NOT AVAILABLE. Never infer availability merely because the trial was published.
 
-Final status must be exactly one:
-- READY FOR PILOT
-- NEEDS DESIGN REVISION
-- NEEDS MORE MECHANISTIC EVIDENCE
-- DEMOTED
+Then audit:
+- attrition chain from REVAMP → IV-FCM → amylophagia → persistent phenotype → iron/Hb eligibility → DNA → final cases
+- whether treatment-arm matching is necessary, redundant, incorrect, or requires more information if all participants are already post-FCM
+- whether ferritin >100 µg/L and Hb ≥110 g/L are defensible and measured at the correct time, or whether continuous variables are preferable
+- whether the phenotype is reproducible and whether binary vs frequency/severity/duration is supported by the actual data
+- best control: matched non-amylophagia, geophagia, resolved amylophagia, or another justified design
+- matching vs adjustment for clinic, gestational age, treatment, ancestry, baseline iron, age, BMI, parity
+- technical validity of duplex ddPCR AMY1/RPP30, AMY1 genomic complexity, reference standards, technical replicates, and need for orthogonal validation
+
+Final verdict must be exactly one:
+- GO — READY FOR PILOT SAMPLING
+- GO — WITH SPECIFIC MODIFICATIONS
+- NO-GO — INSUFFICIENT REVAMP DATA
+- NO-GO — PHENOTYPE NOT RECOVERABLE
+- NO-GO — DESIGN CANNOT TEST H-008
 - KILLED
 
-Do not call H-008 a discovery without experimental validation.
+If GO, provide the final minimal protocol. If NO-GO, identify the single missing piece of information that would change the decision.
+
+After this audit, STOP. Do not generate another hypothesis, continue broad searching, or expand H-008 into additional mechanisms.
 
 ## Scientific guardrails
 Never allow:
