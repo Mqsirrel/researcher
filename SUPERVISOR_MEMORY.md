@@ -4,24 +4,20 @@
 > If Gemini is asked to modify project state, it must leave this file untouched.
 
 ## Purpose
-
 Compact handoff for future ChatGPT conversations when context/quota runs out.
 
 ChatGPT supervises Gemini as a research intern: audit claims, choose the highest-information next action, prevent token waste, and catch scientific overconfidence.
-
 Gemini performs literature/genomic research inside Antigravity.
 
 ## Research goal
-
 Investigate biological mechanisms of Pica and search for overlooked, genuinely testable mechanisms through iterative literature research.
 
 Standard:
 **evidence → contradictions → competing mechanisms → novelty audit → falsification → discriminating predictions**
 
-The target is not a plausible narrative. A successful candidate should be an unusual connection that survives prior-art and adversarial causal review and produces a clear testable prediction.
+Target: not a plausible narrative, but an unusual connection that survives prior-art and adversarial causal review and produces a clear testable prediction.
 
 ## Repo architecture
-
 - `GEMINI.md` — methodology
 - `.agents/hooks.json` — lifecycle enforcement
 - `.agents/hooks/research_gate.py` — lightweight research/stop gate
@@ -30,98 +26,79 @@ The target is not a plausible narrative. A successful candidate should be an unu
 - `SUPERVISOR_MEMORY.md` — **ChatGPT/supervisor-only; Gemini must not modify**
 
 ## Token strategy
-
-User has finite Gemini quota. Do NOT optimize for long autonomous runtime or broad literature completeness.
-
-Optimize for **information gained per token**.
-
-Use:
-`state → targeted search → synonyms → citation traversal → adjacent field → deeper search only if ranking can change`
-
-Prefer killing/demoting candidates cheaply over accumulating supporting papers.
-Do not generate a new hypothesis while a promising candidate still has an unresolved high-information falsification/design question.
+User has finite Gemini quota. Optimize for **information gained per token**, not autonomous runtime or broad literature completeness.
+Use: `state → targeted search → synonyms → citation traversal → adjacent field → deeper search only if ranking can change`.
+Prefer killing/demoting candidates cheaply over accumulating support. Do not generate a new hypothesis while a promising candidate has an unresolved high-information falsification/design question.
 
 ## Important previous failures
-
 ### H-005 / NPVF
-Initially promoted to N4 / Very High with overconfident claims. Later forensic audit found causal NPVF regulation unproven, proximity insufficient, cortisol evidence overgeneralized, RF9 characterization incorrect, and novelty overstated.
-
-Current H-005R: **PLAUSIBLE BUT UNPROVEN**. The Pica/NPVF connection was reportedly already described by the GWAS authors and must not be called novel merely because Gemini rediscovered it.
+Initially overpromoted. Forensic audit found causal NPVF regulation unproven, proximity insufficient, cortisol evidence overgeneralized, RF9 characterization incorrect, novelty overstated.
+Current H-005R: **PLAUSIBLE BUT UNPROVEN**.
 
 ### U-002 / pagophagia
-Gemini prematurely promoted endothelial/TfR1/eNOS/TRPM8 to Very High and marked it resolved. Audit showed rapid symptom resolution constrains timescale but does not identify mechanism.
-
-Current chain remains unproven:
-`IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS → cerebral perfusion → cold-mastication benefit → pagophagia`
-
-Do not accept a mechanistic narrative assembled from disconnected papers as demonstrated causality.
+Gemini prematurely promoted endothelial/TfR1/eNOS/TRPM8 to Very High and marked resolved. Audit showed rapid symptom resolution constrains timescale but does not identify mechanism.
+Current chain remains unproven: `IV iron → transferrin saturation → BMEC TfR1 → endothelial/eNOS → cerebral perfusion → cold-mastication benefit → pagophagia`.
 
 ### H-006
-Adversarial novelty audit classified H-006 as **UNDER-INVESTIGATED BUT NOT NOVEL**. This was a successful falsification/novelty result, not a project failure.
-
-Lesson: failure to find an exact paper is not novelty; alternative terminology and citation chaining matter.
+Adversarial novelty audit: **UNDER-INVESTIGATED BUT NOT NOVEL**. Correctly rejecting a candidate is a successful research outcome.
 
 ## Current hypotheses
-
 ### H-003 — Trigeminal / Cerebral Perfusion Hypoxia Compensation
-**N2 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
-Rapid pagophagia time course is useful, but the endothelial/eNOS/perfusion chain is unproven.
+**N2 / ~35% / PLAUSIBLE BUT UNPROVEN**. Rapid pagophagia time course is useful, but endothelial/eNOS/perfusion chain remains unproven.
 
 ### H-005R — 7p15.3 / NPVF Proximal Locus
-**N1 / Moderate (~35%) / PLAUSIBLE BUT UNPROVEN**.
-Causal gene/mechanism unresolved.
+**N1 / ~35% / PLAUSIBLE BUT UNPROVEN**. Causal gene/mechanism unresolved.
 
 ### H-007 — Hepatic Portal Vagal Transferrin Sensor
-Latest adversarial audit: **SURVIVES — NEEDS MORE EVIDENCE**, ~30%.
-
-The candidate explains ultra-rapid post-IV-iron pica extinction through:
-`IV iron → rapid TSAT increase → hepatic/periportal sensing → hepatic vagal afferents → NTS/PBN → pica-drive suppression`
-
-Critical weakness discovered by Gemini: **zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes**. Liver-vagus signaling, hepcidin regulation, and appetite circuitry separately existing do not prove this complete mechanism.
-
-Do not promote H-007 to experimental-ready until the missing transduction mechanism has stronger evidence or a more defensible testable intermediate is identified.
+**SURVIVES — NEEDS MORE EVIDENCE / ~30%**.
+Proposed chain: `IV iron → rapid TSAT increase → hepatic/periportal sensing → hepatic vagal afferents → NTS/PBN → pica-drive suppression`.
+Critical weakness: zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes. Do not promote until missing transduction mechanism has stronger evidence or a defensible intermediate is identified.
 
 ### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagy
-Latest adversarial audit: **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN**, ~45%, but this now requires a statistical/experimental-design audit before any further promotion.
+Latest Gemini commit: **e057a9c — NEEDS PILOT DATA FIRST (~40%)**.
 
-Core observation:
-IV iron reportedly failed to resolve amylophagy in the cited REVAMP 2025 RCT while geophagy improved. Gemini proposes:
-`AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
+Core proposition: `AMY1 CNV → salivary amylase → pre-absorptive starch handling/glycemic signaling → selective persistent starch craving`, potentially interacting with pregnancy insulin resistance.
+Core observation: cited REVAMP 2025 RCT reportedly found IV iron failed to resolve amylophagy while geophagy improved.
 
-Important caveat: established AMY1 biology is NOT evidence that AMY1 causes amylophagy. The unproven edge is specifically:
-**AMY1 copy number → compulsive non-food starch craving/amylophagia.**
+The key unproven edge is **AMY1 copy number → compulsive non-food starch craving/amylophagia**. Established AMY1 digestion biology is not evidence for this edge.
 
-Proposed test must not assume arbitrary copy-number thresholds or effect sizes. The relevant human phenotype, measurement method, confounders, power, and falsification criterion must be justified prospectively.
+The statistical/design audit correctly moved H-008 from "ready for experimental design" to **pilot first** because there is no reliable prior effect-size/variance information in the relevant pregnancy population and there may be GERD/reflux and ancestry/population confounding.
+
+Gemini currently proposes a 90-person feasibility pilot: 30 persistent amylophagy, 30 resolved geophagy, 30 healthy controls; duplex AMY1/RPP30 ddPCR on REVAMP biobank DNA. Treat this as a draft, NOT a validated design.
+
+Important problems still to resolve:
+- "resolved geophagy" may be a poor primary control for an AMY1/amylophagia hypothesis; persistent amylophagy should likely be compared primarily with appropriate matched controls without persistent amylophagia, with geophagy as a secondary comparator.
+- N=90 has not yet been justified by reliable prior effect-size data; a pilot may be for variance/assay/phenotype estimation rather than formal hypothesis testing.
+- Gemini's proposed equivalence interval OR 0.90–1.10 is not automatically defensible; it needs scientific justification or should be replaced by a pilot-estimation framework.
+- `p > 0.05` alone must never be treated as falsification.
+- "cases have higher AMY1 CNV" is evidence against the specific low-copy-number direction but does not automatically eliminate every possible AMY1 mechanism.
+- Do not use arbitrary AMY1 copy thresholds (e.g. ≤4) without evidence.
 
 ## Current ranking
-
-1. **H-008** — strongest current candidate; potentially novel and experimentally testable, pending design/statistical audit.
-2. **H-007** — interesting and potentially novel, but critical sensor/transduction evidence is missing.
+1. **H-008** — strongest current candidate; potentially novel and testable, but needs pilot/design revision.
+2. **H-007** — interesting/potentially novel, but missing critical sensor/transduction evidence.
 
 Do NOT generate H-009 yet.
 
 ## Current highest-value task
-
-Perform a **statistical + experimental-design audit of H-008 only**.
-
-Do NOT spend tokens on another broad literature review unless a specific finding is needed to resolve a design question.
+Run a **final design audit of H-008 only**, not another broad literature review.
 
 Audit:
-1. Whether the REVAMP phenotype is suitable for testing H-008 and how persistent amylophagia should be defined.
-2. Whether binary amylophagia is adequate versus frequency/severity/duration.
-3. Whether any proposed sample size is actually powered; do not assume N=60/group.
-4. What effect sizes are defensible and what sample size can detect them.
-5. Best AMY1 CNV measurement method (ddPCR/qPCR/sequencing/other validated methods).
-6. Whether CNV should be modeled continuously or categorically; no arbitrary ≤4 threshold without evidence.
-7. Appropriate primary statistical model and major confounders: ancestry/population structure, age, BMI, parity, gestational stage, diet/carbohydrate exposure, socioeconomic factors, iron status and treatment response, and other relevant variables.
-8. Which causal edges the human study can actually test versus merely associate.
-9. At least two competing explanations and measurements that discriminate them.
-10. A real falsification criterion using effect-size confidence intervals, meaningful pre-specified effects, power, and equivalence testing if appropriate. Never use p>0.05 alone as proof of falsification.
-11. Whether an existing biobank, a pilot, or a new cohort gives the highest information per sample/cost.
+1. Whether REVAMP phenotype is suitable and how persistent amylophagia should be defined (binary vs frequency/severity/duration).
+2. Whether persistent amylophagia vs appropriate matched non-amylophagia controls is a better primary comparison than resolved geophagy; use geophagy as secondary if appropriate.
+3. Inclusion/exclusion criteria and which variables should be matched vs adjusted.
+4. Whether N=90 has a defensible purpose; do not assume conventional power without a credible effect size.
+5. Best AMY1 CNV measurement method and whether CNV should be continuous or categorical.
+6. Primary statistical model and confounders: ancestry/population structure, age, BMI, parity, gestational stage, diet/carbohydrate exposure, socioeconomic factors, iron status/treatment response, GERD/reflux, and other relevant factors.
+7. Which causal edges the human pilot can actually test versus merely associate.
+8. At least two competing explanations and discriminating measurements.
+9. A defensible decision rule. Do not use p>0.05 alone; do not invent an equivalence interval.
+10. What the pilot can establish, what it cannot, and whether a larger confirmatory study would be justified.
+11. Choose the highest information per sample/cost/token.
 
-Final verdict must be exactly one of:
-- READY FOR A REAL-WORLD EXPERIMENT
-- NEEDS PILOT DATA FIRST
+Final status must be exactly one:
+- READY FOR PILOT
+- NEEDS DESIGN REVISION
 - NEEDS MORE MECHANISTIC EVIDENCE
 - DEMOTED
 - KILLED
@@ -129,7 +106,6 @@ Final verdict must be exactly one of:
 Do not call H-008 a discovery without experimental validation.
 
 ## Scientific guardrails
-
 Never allow:
 - correlation → causation
 - genomic proximity → causal gene
@@ -143,23 +119,19 @@ Never allow:
 
 Classify claims as:
 **ESTABLISHED / DIRECTLY SUPPORTED / INDIRECTLY SUPPORTED / PLAUSIBLE / SPECULATIVE / UNRESOLVED**.
-
 For novelty, distinguish **not found** from **not previously proposed**.
 
 ## How ChatGPT should manage Gemini
-
-When Gemini returns work:
-1. Check whether evidence supports the claim.
-2. Find the weakest causal edge.
+1. Check evidence against claims.
+2. Find weakest causal edge.
 3. Give Gemini the smallest high-value next task.
 4. Prefer falsification over confirmation.
 5. Treat correctly rejected hypotheses as successful research.
 6. Check canonical state/report consistency.
-7. Avoid unnecessary searches and token-heavy prompts.
+7. Avoid unnecessary searches/token-heavy prompts.
 8. Distinguish resolving a question from choosing the most plausible explanation.
-9. If evidence cannot discriminate, keep it **UNRESOLVED**.
-10. Only spend additional quota on a candidate when the next search/analysis can materially change its ranking.
+9. If evidence cannot discriminate, keep **UNRESOLVED**.
+10. Only spend quota when the next action can materially change ranking.
 
 ## Resume instruction
-
 When this file is supplied in a new ChatGPT conversation, inspect the latest repo commits/state first. Then give the user the **single highest-information next action** rather than restarting the research.
