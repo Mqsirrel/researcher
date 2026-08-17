@@ -11,16 +11,13 @@ Maintain multiple competing explanations with explicit predictions, falsifiers, 
 | **H-005R** | **7p15.3 / NPVF Proximal Locus Genetic Model** | Blood Donor Genetic Risk | Direct statistical GWAS association of `rs73277282` (REDS-III, AoU replication); fine-mapping isolates 17.5 kb LD block containing active enhancer `ENSR7_9D2JJ` 15.7 kb from *NPVF*. | Bulk GTEx lacks eQTL due to cell-type rarity; direct human hypothalamic CRISPRi/snRNA-seq proof is pending. | **N1 (Published GWAS Candidate)** | **Moderate (~35%)** | **PLAUSIBLE BUT UNPROVEN** |
 | **H-006** | **Olfactory Glomerular Disinhibition & Desiderosmia Model** | Geosminophilia & Geophagia | Geosminophilia present in 93.8% of geophagia patients (PMID 38222205); iron deficiency impairs dopaminergic periglomerular lateral inhibition in rodents (PMID 29520328). | General IDA patients display hyposmia on Sniffin' Sticks; concept linking olfactory craving to geophagy already published (PMID 42152139). | **N1 (Previously Proposed / Dispersed)** | **Moderate-High (~45%)** | **UNDER-INVESTIGATED BUT NOT NOVEL** |
 | **H-007** | **Hepatic Portal Vagal Transferrin Sensor Circuit** | Ultra-rapid $<24$h Pica Extinction | IV iron rapidly saturates circulating transferrin ($TSAT > 80\%$ in 1–4h) and clears via hepatic periportal hepatocytes; vagus modulates hepcidin/sickness behavior (PMID 37661330). | Zero electrophysiological evidence that vagal afferents possess transferrin-sensitive ion channels or fire in response to acute transferrin saturation. | **N4 (Unproposed Cross-Field Connection)** | **Low-Moderate (~30%)** | **SURVIVES — NEEDS MORE EVIDENCE** |
-| **H-008** | **Salivary Amylase (*AMY1*) CNV & Gestational Starch Counter-Regulation Model** | **Amylophagy Failure to Resolve with IV Iron (REVAMP 2025 RCT)** | Direct clinical trial proof that IV iron fails to resolve amylophagy ($PR=0.93, p=0.31$, PMID 40368302); *AMY1* CNV determines salivary amylase and pre-absorptive glycemic curve; pregnancy induces insulin resistance. | Zero prior data on *AMY1* in pica cohorts; potential confounding by GERD/reflux buffering and ancestral population stratification. | **N4 (Unproposed Cross-Field Connection)** | **Moderate (~40%)** | **NEEDS PILOT DATA FIRST** |
+| **H-008** | **Salivary Amylase (*AMY1*) CNV & Gestational Starch Counter-Regulation Model** | **Amylophagy Failure to Resolve with IV Iron (REVAMP 2025 RCT)** | Direct clinical trial proof that IV iron fails to resolve amylophagy ($PR=0.93, p=0.31$, PMID 40368302); *AMY1* CNV determines salivary amylase and pre-absorptive glycemic curve; pregnancy induces insulin resistance. | Lack of prior pilot variance data; potential confounding by GERD/reflux buffering and ancestral population stratification. | **N4 (Unproposed Cross-Field Connection)** | **Moderate (~40%)** | **READY FOR PILOT** |
 
 ---
 
-## Statistical & Experimental Design Audit: H-008
+## Refined Pilot Specifications for H-008
 
-```
-[Design Weakness]    ──► Zero existing pilot data on effect size variance in African pregnancy cohorts; potential GERD confounding.
-[Best Endpoint]      ──► Confirmed persistent daily amylophagy (≥50 g/day) post-iron repletion + quantitative continuous AMY1 ddPCR.
-[Recommended Design] ──► Nested case-control pilot study (N=30 persistent amylophagy vs N=30 resolved geophagy vs N=30 controls) on banked REVAMP DNA.
-[Falsification Rule] ──► Equivalence to null (95% CI of adjusted OR per copy inside [0.90, 1.10]) OR point estimate in opposite direction.
-[Final Status]       ──► NEEDS PILOT DATA FIRST
-```
+* **Study Design:** Nested 1:2 matched case-control pilot study using banked genomic DNA and follow-up data from the completed 2025 REVAMP trial (PMID 40368302).
+* **Primary Cohort:** $N = 30$ Confirmed Persistent Daily Amylophagy Cases vs. $N = 60$ Matched Non-Amylophagy Controls (both post-IV iron with confirmed ferritin $>100\text{ }\mu\text{g/L}$, matched by clinic site and gestational age).
+* **Genotyping:** Duplex ddPCR (*AMY1* vs *RPP30*) on maternal genomic DNA to quantify integer diploid copy numbers (2 to 20).
+* **Goal of Pilot:** Estimate population-specific *AMY1* copy number distribution ($\mu \pm \sigma$), assess ddPCR assay fidelity in African genomic DNA, evaluate confounding by GERD scores and ancestry PCs, and generate an empirical effect-size estimate to formally power a confirmatory study.
