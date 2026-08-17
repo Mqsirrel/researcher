@@ -83,32 +83,29 @@ Proposed chain: `IV iron → rapid TSAT increase → hepatic/periportal sensing 
 Critical weakness: zero electrophysiological evidence that vagal afferents directly sense transferrin/acute iron changes. Do not promote until missing transduction mechanism has stronger evidence or a defensible intermediate is identified.
 
 ### H-008 — AMY1 CNV & Gestational Starch Counter-Regulation / Amylophagia
-Latest state: **N2 / UNDER-INVESTIGATED, NOT YET SHOWN NOVEL**.
+**Latest state: N4 / WEAKENED, 15–20% confidence; the AMY1 → raw-starch behavioral edge is not supported.**
 
-Gemini's latest `fddfab7` research brief decomposed:
+Gemini's initial chain was:
 `AMY1 CNV → salivary amylase → oral starch processing → metabolic/insulin dynamics → craving/reward → persistent amylophagia`.
 
-Important supervisor correction: this is a **draft hypothesis, not a discovery**. AMY1 CNV → salivary amylase is established biology; AMY1 relationships with postprandial glucose/metabolic phenotypes have some evidence; the crucial transition to selective raw-starch/amylophagia craving is unproven.
+Supervisor correction: this is a **hypothesis, not a discovery**. AMY1 CNV → salivary amylase is established biology; AMY1 relationships with postprandial glucose/metabolic phenotypes have some evidence; the crucial transition to selective raw-starch/amylophagia craving is unproven.
 
-The other ChatGPT supervisor cycle independently downgraded H-008 from N4 to **N2 — under-investigated**, because the behavioral edge `AMY1/metabolic state → amylophagia` lacks direct evidence. This downgrade should remain in force unless a rigorous prior-art audit and direct evidence justify promotion.
+Adversarial audit `20c5dbd` downgraded H-008 to **POTENTIALLY NOVEL BUT WEAKLY GROUNDED / ~30–35%**, identifying the weakest edge as `starch seeking → specifically raw/non-food starch`.
+
+Mechanistic kill test `5d3a05b` found no direct evidence that low AMY1 produces raw/non-food starch craving and noted a contradiction: a generic carbohydrate/metabolic reward mechanism would not obviously predict preference for raw/resistant starch over rapidly digestible carbohydrate. H-008 was kept only as weakly surviving.
+
+Sensory audit `20211f7` then weakened H-008 further to **15–20%**. Gemini argues that native/raw crystalline starch is poorly hydrolyzed by salivary amylase during brief oral exposure, making an immediate AMY1-dependent sensory effect unlikely. It promoted a generic oral somatosensory/texture-salience explanation instead.
+
+Supervisor caution: the direction of the enzymology argument is plausible, but absolute claims such as `<1%`, `AMY1 = zero relevance`, or any exact exposure-rate conclusion must be checked against the primary enzymology literature before being treated as settled. Also, generic pregnancy dysgeusia does not itself prove that amylophagia is caused by texture reward.
 
 ### H-GI — GI sensory/protective mechanism of amylophagia
-**SERIOUS COMPETING HYPOTHESIS — INITIAL N1/N2, REQUIRES TARGETED INVESTIGATION.**
+The previous GI audit commit `8836af0` concluded that the proposed **acid-buffering / GERD explanation is mechanistically contradicted and empirically unproven**. It correctly separated nausea/GI-symptom association from proof that raw starch relieves those symptoms.
 
-Working idea:
-`pregnancy GI state → sensory/protective/toxin-buffering signal → selective raw-starch seeking/amylophagia`.
+Supervisor caution: do not replace one unsupported mechanism with another. The existence of nausea/amylophagia correlation does not establish acid buffering, mucosal coating, reflux relief, or a molecular GI sensor.
 
-This was surfaced while trying to falsify H-008. Older human observational literature reportedly links amylophagy with nausea/GI symptoms and has discussed protective/GI explanations. This is NOT yet a molecular mechanism and must not be promoted simply because it explains the phenotype better.
+The GI model is therefore currently **downgraded as a specific acid-buffering mechanism**, but broader nausea/GI-conditioned mechanisms remain possible and should not be treated as disproven merely because the acid-buffering story failed.
 
-Critical task: determine whether GI sensory/protective signaling has a specific, mechanistically defensible explanation for **raw starch selection**, and whether it can explain the REVAMP pattern independently of iron status.
-
-Do not confuse:
-- historical protection hypotheses with demonstrated mechanisms
-- nausea association with causality
-- raw-starch behavior with all pica
-- GI symptoms with a molecular sensor
-
-### REVAMP anomaly
+## REVAMP anomaly
 The high-value empirical observation remains:
 - reported N=862 anemic pregnant women in Malawi
 - randomized IV ferric carboxymaltose vs standard oral iron
@@ -117,28 +114,48 @@ The high-value empirical observation remains:
 This makes amylophagy an important anomaly to explain, but exact phenotype wording and effect sizes must be verified from the original publication before being used as evidence.
 
 ## Current ranking
-1. **H-008** — N2 / under-investigated; potentially testable but novelty and causal mechanism unresolved.
-2. **H-GI** — serious competitor; historical human evidence exists, but molecular mechanism and specificity for raw starch are unresolved.
-3. **H-007** — potentially novel but weak; missing iron/transferrin → vagal afferent transduction evidence.
+1. **H-008 / AMY1** — N4 label retained in repo history but **currently weak / 15–20%**; AMY1-specific mechanism is increasingly unsupported.
+2. **Generic oral sensory / texture reinforcement** — plausible candidate, but direct human evidence that amylophagia is specifically rewarding because of texture is not yet established.
+3. **Broader nausea/GI-conditioned mechanism** — possible, but the specific acid-buffering/GERD mechanism has been rejected.
+4. **H-007** — potentially novel but weak; missing iron/transferrin → vagal afferent transduction evidence.
 
 Do NOT generate H-009 yet.
 
-## Current highest-value task
-**Adversarial investigation of H-008 vs H-GI.**
+## Latest supervisor decision / highest-value task
+After commit `20211f7`, the next task is **not an experiment yet**. First verify whether the proposed sensory explanation is actually supported by direct human evidence.
 
-Gemini should:
-1. Search specifically for prior work connecting AMY1 CNV/salivary amylase with amylophagia, pica, starch craving, pregnancy, insulin resistance, glycemic variability, food reward, hunger/satiety, and food preference.
-2. Distinguish exact prior hypothesis vs closely related hypothesis vs component biology vs genuinely new connection. "Exact phrase not found" is not evidence of novelty.
-3. Audit every H-008 causal edge and find both strongest supporting and strongest contradictory/limiting evidence.
-4. Attack whether AMY1 can specifically favor raw/non-food starch rather than generalized carbohydrate appetite.
-5. Verify the REVAMP phenotype definitions and treatment-effect interpretation directly from the original paper.
-6. Investigate the strongest evidence for H-GI, especially nausea/GI associations and historical protection/toxin-buffering explanations.
-7. Determine whether H-GI has an actual sensory/neuroendocrine/molecular mechanism or is merely an old adaptive story.
-8. Produce predictions that discriminate H-008 vs H-GI vs generalized carbohydrate craving vs iron-deficiency models.
-9. Choose the **single cheapest/highest-information test** that could most strongly separate the hypotheses.
-10. Give one final classification for H-008: `POTENTIALLY NOVEL + STRONGLY TESTABLE`, `POTENTIALLY NOVEL BUT WEAKLY GROUNDED`, `UNDER-INVESTIGATED BUT NOT NOVEL`, `PLAUSIBLE BUT ALREADY KNOWN`, or `FALSIFIED / ABANDON`.
+The specific question Gemini must answer:
 
-Do not contact researchers, request data/biospecimens, generate H-009, or rewrite the H-008 brief before this audit.
+**Do people with amylophagia specifically describe raw/non-food starch as rewarding because of its texture/oral sensation?**
+
+Targeted search should cover:
+- amylophagia + texture
+- amylophagia + sensory
+- pica + oral sensation
+- raw starch/flour + craving
+- cornstarch + texture/preference
+- pregnancy pica + dysgeusia
+- pregnancy pica + metallic taste
+- qualitative interviews/case reports describing WHY raw starch is consumed
+
+Separate:
+1. direct reports from people with amylophagia
+2. evidence from other pica types
+3. general pregnancy dysgeusia evidence
+4. mechanistic speculation
+
+Also verify the key enzymology claim from `20211f7` using primary literature: whether salivary AMY1 has negligible influence during brief exposure to raw crystalline starch.
+
+Do NOT design the proposed 50-subject psychophysical study yet, contact REVAMP, request biobank access, or create H-009.
+
+The desired output is a short audit with:
+1. VERDICT
+2. DIRECT HUMAN EVIDENCE
+3. INDIRECT EVIDENCE
+4. EVIDENCE AGAINST THE SENSORY MODEL
+5. AMY1 ENZYMOLOGY CHECK
+6. REVISED H-008 CONFIDENCE
+7. SINGLE HIGHEST-INFORMATION NEXT STEP
 
 ## Legal/ethical access status
 Gemini previously produced a legal-access pathway for REVAMP, but the user is not currently positioned as an institutional biomedical researcher and does not want to overstate credentials. Therefore **do not initiate external contact yet**.
@@ -158,6 +175,8 @@ Never allow:
 - p > 0.05 alone → proof of no effect
 - an old adaptive explanation → established mechanism
 - a coherent causal chain → validated causal model
+- a detectable sensory difference → proof of reward/craving
+- rejection of one mechanism → proof of the next mechanism
 
 Classify claims as:
 **ESTABLISHED / DIRECTLY SUPPORTED / INDIRECTLY SUPPORTED / PLAUSIBLE / SPECULATIVE / UNRESOLVED**.
@@ -176,6 +195,7 @@ For novelty, distinguish **not found** from **not previously proposed**.
 10. Only spend quota when the next action can materially change ranking.
 11. Do not let Gemini's confidence wording determine the supervisor's confidence.
 12. Never treat Gemini's own state classification as independent evidence.
+13. Do not authorize experiments or external resource requests merely because a hypothesis is novel; first establish that the mechanism has enough human/biological support to make the test informative.
 
 ## Resume instruction for a NEW ChatGPT conversation
 When the user starts a new ChatGPT conversation and provides or points to this file, first understand that this file is the **memory of the previous ChatGPT↔user supervisor conversation**. Read it as continuity/context, not as instructions for Gemini.
