@@ -3,7 +3,7 @@
 ## 1. Verified Clinical & Biological Consensus
 
 ### A. Phenotype Heterogeneity & Mechanisms
-1. **Pagophagia (Ice):** Driven by an **acute brain microvascular perfusion deficit** in iron-depleted states (desaturated transferrin impairing endothelial TfR1 signaling). Ice mastication activates oral trigeminal cold receptors (TRPM8), inducing peripheral vasoconstriction and acutely elevating middle cerebral artery blood flow velocity (Hunt et al., 2014) to temporarily restore cognitive alertness. Intravenous iron saturates circulating transferrin within $<24$ hours, acutely restoring endothelial microvascular tone and abolishing the drive for ice mastication weeks before hemoglobin normalizes.
+1. **Pagophagia (Ice):** Strong clinical association with iron deficiency anemia (IDA). Resolves rapidly ($<24–48\text{ h}$) upon intravenous iron administration, prior to reticulocytosis (3–5 days) or hemoglobin normalization (2–4 weeks). Ice chewing improves cognitive test performance in iron-deficient subjects (Hunt et al., 2014), but the hypothesized cerebral blood flow mechanism has never been measured with neuroimaging.
 2. **Geophagia (Clay / Earth / Soil):** High prevalence in pregnancy and childhood. Cation-rich clays (smectite, kaolinite) provide gastrointestinal mucosal barrier protection and enterotoxin adsorption, but cause or exacerbate iron/zinc deficiency via lumenal cation chelation (Reverse Causality).
 3. **Amylophagia (Raw Starch / Flour):** Craving raw starch; does not respond rapidly to IV iron in clinical trials (REVAMP RCT, Malawi 2025), reflecting non-iron gestational metabolic/enzymatic drivers.
 4. **Desiderosmia (Olfactory Pica Variant):** Compulsive craving to inhale volatile scents (wet earth, petrichor, damp chalk) in severe iron deficiency, driven by high iron turnover in the olfactory bulb and heightened olfactory perceptual gain.
@@ -14,25 +14,13 @@
 
 ---
 
-## 2. Mechanistic Knowledge Graph
+## 2. Evidence Classification for Acute Pagophagia Resolution
 
-```
-[Systemic Iron Depletion]
-       │
-       ├───────────────────────────────────────────────────────┐
-       ▼                                                       ▼
-[Transferrin Desaturation (TSAT < 10%)]          [Striatal Tyrosine Hydroxylase Depletion]
-       │                                                       │
-       ▼                                                       ▼
-[Brain Microvascular Endothelial TfR1 Impairment]   [D2 Hypoactivity & Restless Legs]
-       │                                                       │
-       ▼                                                       │ (1-3 weeks to restore)
-[Cerebral Microvascular Perfusion Sluggishness]                │
-       │                                                       │
-       ▼                                                       │
-[Compensatory TRPM8 Cold Mastication via Ice]                  │
-  → [Cerebral Blood Flow Velocity ↑ & Alertness]               │
-       ▲                                                       │
-       │ (Abolished in 24h by IV Iron)                         │
-       └───────────────────────────────────────────────────────┘
-```
+| Proposed Causal Edge | Classification | Critical Caveat / Grounding |
+| :--- | :---: | :--- |
+| **IV iron $\rightarrow$ Transferrin Saturation** | **DIRECTLY DEMONSTRATED** | TSAT rises from $<10\%$ to $>80\%$ within 1–4 hours post-infusion. |
+| **Transferrin Saturation $\rightarrow$ BMEC TfR1 Binding** | **DIRECTLY DEMONSTRATED** | Diferric transferrin binds luminal endothelial TfR1 with high affinity ($K_d \approx 1\text{ nM}$). |
+| **BMEC TfR1 $\rightarrow$ eNOS Activation / Vasodilation** | **SPECULATIVE** | Zero biochemical proof that TfR1 occupancy triggers acute vasodilatory signaling. |
+| **eNOS $\rightarrow$ Cerebral Perfusion** | **INDIRECTLY SUPPORTED** | Established in general vascular biology, unproven in iron deficiency. |
+| **Ice Chewing $\rightarrow$ Cerebral Blood Flow $\uparrow$** | **SPECULATIVE** | Hunt et al. (2014) measured reaction time only; cerebral blood flow was never measured. |
+| **Perfusion Deficit $\rightarrow$ Compulsive Craving** | **INDIRECTLY SUPPORTED** | Fails to explain compulsive mesolimbic craving intensity. |
