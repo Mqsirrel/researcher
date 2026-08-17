@@ -10,19 +10,22 @@ Maintain multiple competing explanations with explicit predictions, falsifiers, 
 | **H-004** | **GI Mucosal Coating & Enterotoxin Sequestration Model** | Geophagy (Clay) | Smectite/kaolin clays bind bacterial toxins and plant tannins; colobus monkeys prefer clay-rich over iron-rich soils. | Explains geophagy as adaptive barrier protection, but fails for non-toxic pregnancy or ice pica. | **N1 (Proposed)** | **High (for Geophagy)** | Active (Subtype Specific) |
 | **H-005R** | **7p15.3 / NPVF Proximal Locus Genetic Model** | Blood Donor Genetic Risk | Direct statistical GWAS association of `rs73277282` (REDS-III, AoU replication); fine-mapping isolates 17.5 kb LD block containing active enhancer `ENSR7_9D2JJ` 15.7 kb from *NPVF*. | Bulk GTEx lacks eQTL due to cell-type rarity; direct human hypothalamic CRISPRi/snRNA-seq proof is pending. | **N1 (Published GWAS Candidate)** | **Moderate (~35%)** | **PLAUSIBLE BUT UNPROVEN** |
 | **H-006** | **Olfactory Glomerular Disinhibition & Desiderosmia Model** | Geosminophilia & Geophagia | Geosminophilia present in 93.8% of geophagia patients (PMID 38222205); iron deficiency impairs dopaminergic periglomerular lateral inhibition in rodents (PMID 29520328). | General IDA patients display hyposmia on Sniffin' Sticks; concept linking olfactory craving to geophagy already published (PMID 42152139). | **N1 (Previously Proposed / Dispersed)** | **Moderate-High (~45%)** | **UNDER-INVESTIGATED BUT NOT NOVEL** |
-| **H-007** | **Hepatic Portal Vagal Transferrin Sensor Circuit** | **Ultra-rapid $<24$h Pica Extinction Post-IV Iron** | IV iron rapidly saturates circulating transferrin ($TSAT > 80\%$ in 1–4h) and clears via hepatic periportal hepatocytes; vagus modulates hepcidin/sickness behavior (PMID 37661330). | **Zero electrophysiological evidence** that vagal afferents possess transferrin-sensitive ion channels or fire in response to acute transferrin saturation. | **N4 (Unproposed Cross-Field Connection)** | **Low-Moderate (~30%)** | **SURVIVES — NEEDS MORE EVIDENCE** |
-| **H-008** | **Salivary Amylase (*AMY1*) CNV & Gestational Starch Counter-Regulation Model** | **Amylophagy Failure to Resolve with IV Iron (REVAMP 2025 RCT)** | Direct clinical trial proof that IV iron fails to resolve amylophagy ($PR=0.93, p=0.31$, PMID 40368302); *AMY1* CNV determines salivary amylase and pre-absorptive glycemic curve; pregnancy induces insulin resistance. | Direct ddPCR quantification of *AMY1* diploid copy number in clinical amylophagy cohorts vs. non-amylophagy cohorts is pending. | **N4 (Unproposed Cross-Field Connection)** | **Moderate-High (~45%)** | **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN** |
+| **H-007** | **Hepatic Portal Vagal Transferrin Sensor Circuit** | Ultra-rapid $<24$h Pica Extinction | IV iron rapidly saturates circulating transferrin ($TSAT > 80\%$ in 1–4h) and clears via hepatic periportal hepatocytes; vagus modulates hepcidin/sickness behavior (PMID 37661330). | Zero electrophysiological evidence that vagal afferents possess transferrin-sensitive ion channels or fire in response to acute transferrin saturation. | **N4 (Unproposed Cross-Field Connection)** | **Low-Moderate (~30%)** | **SURVIVES — NEEDS MORE EVIDENCE** |
+| **H-008** | **Salivary Amylase (*AMY1*) CNV & Gestational Starch Counter-Regulation Model** | **Amylophagy Failure to Resolve with IV Iron (REVAMP 2025 RCT)** | Direct clinical trial proof that IV iron fails to resolve amylophagy ($PR=0.93, p=0.31$, PMID 40368302); *AMY1* CNV determines salivary amylase and pre-absorptive glycemic curve; pregnancy induces insulin resistance. | Assumption that low *AMY1* specifically provokes compulsive non-food starch craving rather than generic carbohydrate intake. | **N4 (Unproposed Cross-Field Connection)** | **Moderate-High (~45%)** | **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN** |
 
 ---
 
-## Adversarial Audit Trail: H-007 vs. H-008
+## Detailed Audit Summary: Hypothesis H-008
 
-### Audit of H-007 (Hepatic Vagus Iron Sensor):
-* **Strongest Vulnerability:** Complete lack of an identified electrophysiological transduction mechanism on vagal terminals for non-heme iron / transferrin.
-* **Evidence Searched:** Vagal electrophysiology, nodose ganglion channelomics, vagotomy iron feeding studies.
-* **Verdict:** **SURVIVES — NEEDS MORE EVIDENCE** (Demoted from ready-for-design due to multiple unsupported biophysical assumptions).
-
-### Audit of H-008 (Salivary Amylase *AMY1* CNV & Amylophagy):
-* **Strongest Vulnerability:** Unproven assumption that low *AMY1* CNV specifically drives compulsive non-food starch craving rather than general dietary carbohydrate intake.
-* **Evidence Searched:** *AMY1* copy number literature, starch perception, dietary preference genomics, pregnancy carbohydrate metabolism.
-* **Verdict:** **POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN** (Survives because the clinical failure of iron therapy in amylophagy is firmly established in a 2025 double-blind RCT, and *AMY1* CNV ddPCR genotyping provides an immediate, definitive, low-cost falsification test).
+```
+[Prior-Art Audit] ──► 0 papers linking AMY1 CNV to pica, amylophagia, or non-food starch cravings.
+[Causal Edges]    ──► AMY1 -> Salivary Amylase: DIRECTLY DEMONSTRATED
+                  ──► Amylase -> Starch Liquefaction: DIRECTLY DEMONSTRATED
+                  ──► Digestion -> Metabolic Glycemia: INDIRECTLY SUPPORTED
+                  ──► Glycemia -> Compulsive Craving: PLAUSIBLE
+                  ──► Compulsive Craving -> Amylophagy: SPECULATIVE (Weakest Edge)
+[Counterevidence] ──► Sub-Saharan populations have intermediate AMY1 copy numbers; reflux buffering is competing driver.
+[Novelty]         ──► POTENTIALLY NOVEL (Genuinely unproposed in pica literature).
+[Decisive Test]   ──► Droplet digital PCR (ddPCR) of AMY1 copy number in REVAMP trial biobank.
+[Status]          ──► POTENTIALLY NOVEL — READY FOR EXPERIMENTAL DESIGN
+```
